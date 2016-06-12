@@ -4,40 +4,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/header_bg"
-        android:orientation="horizontal" >
+        android:layout_height="@dimen/_96px"
+        android:background="@drawable/header_bg" >
 
         <TextView
             android:id="@+id/jishi_dw"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="5"
-            android:gravity="center_vertical"
-            android:padding="10dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_20px"
             android:text="海口市>"
             android:textColor="@color/yzc_textcolor"
             android:textSize="18sp" />
 
-   
-
         <ImageView
             android:id="@+id/jishi_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
+            android:layout_width="@dimen/_96px"
+            android:layout_height="@dimen/_96px"
+            android:padding="@dimen/_20px"
+            android:layout_toLeftOf="@+id/jishi_filter"
             android:src="@drawable/jishi_search" />
+
         <ImageView
             android:id="@+id/jishi_filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:src="@drawable/jishi_filter" />        
-        
-    </LinearLayout>
-<include layout="@layout/activity_jishi_fenlei" />
+            android:layout_width="@dimen/_96px"
+            android:layout_height="@dimen/_96px"
+            android:padding="@dimen/_20px"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/jishi_filter" />
+    </RelativeLayout>
+
+    <include layout="@layout/activity_jishi_fenlei" />
+
 </LinearLayout>

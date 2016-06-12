@@ -4,33 +4,31 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/header_bg"
-        android:orientation="horizontal" >
+        android:layout_height="@dimen/_96px"
+        android:background="@drawable/header_bg">
 
         <TextView
             android:id="@+id/xiangcun_dingwei"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="5"
+            android:layout_alignParentLeft="true"
             android:gravity="center_vertical"
-            android:padding="10dp"
+            android:padding="@dimen/_20px"
             android:text="海口市>"
             android:textColor="@color/yzc_textcolor"
             android:textSize="18sp" />
-
-   
-
         <ImageView
             android:id="@+id/xiangcun_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
+            android:layout_width="@dimen/_96px"
+            android:layout_height="@dimen/_96px"
+            android:gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_20px"
+            android:layout_alignParentRight="true"
             android:src="@drawable/xiangcun_search" />        
         
-    </LinearLayout>
+    </RelativeLayout>
     <include layout="@layout/activity_xiangcun_list_detail" />
 </LinearLayout>

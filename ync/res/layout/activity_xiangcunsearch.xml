@@ -8,37 +8,37 @@
 <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >"
+        android:orientation="vertical" >
     
     
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/header_bg"
-        android:orientation="horizontal" >
-
+        android:layout_height="@dimen/_96px"
+        android:background="@drawable/header_bg">
         <TextView
             android:id="@+id/xiangcunsearch_back"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.33"
-            android:gravity="center_vertical"
-            android:padding="10dp"
-            android:text="&lt;返回"
+            android:layout_height="@dimen/_96px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_20px"
+            android:paddingRight="@dimen/_20px"
+            android:drawableLeft="@drawable/btn_back"
+            android:text=" 返回"
             android:textColor="@color/yzc_textcolor"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.88"
-            android:gravity="center_vertical"
-            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
             android:text="搜索框"
             android:textColor="@color/yzc_textcolor"
             android:textSize="18sp" />
    
-    </LinearLayout>    
+    </RelativeLayout>    
 
     <LinearLayout
         android:layout_width="match_parent"

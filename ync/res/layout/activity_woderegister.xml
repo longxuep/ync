@@ -3,51 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:background="#ffffff" >
+    android:background="@color/white" >
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/header_bg"
-        android:orientation="horizontal" >
+        android:layout_height="@dimen/_96px"
+        android:background="@drawable/header_bg" >
 
         <TextView
             android:id="@+id/xiangcundingwei_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.33"
+            android:layout_alignParentLeft="true"
             android:gravity="center_vertical"
             android:padding="10dp"
-            android:text="&lt;返回"
+            android:drawableLeft="@drawable/btn_back"
+            android:text=" 返回"
             android:textColor="@color/yzc_textcolor"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.05"
+            android:layout_centerInParent="true"
             android:gravity="center_vertical"
-            android:padding="10dp"
             android:text="注  册 "
             android:textColor="@color/yzc_textcolor"
             android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="已有账号 "
-            android:textColor="@color/yzc_textcolor"
-            android:textSize="18sp" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/financing_out_tab_line1"
@@ -57,7 +45,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/h48"
+        android:layout_height="@dimen/_96px"
         android:gravity="center"
         android:orientation="horizontal" >
 
@@ -92,7 +80,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/h48"
+        android:layout_height="@dimen/_96px"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 

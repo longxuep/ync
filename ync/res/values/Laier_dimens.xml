@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="shop_goods_main_item_width">64dp</dimen>
+    <dimen name="shop_goods_detail_add_width">40dp</dimen>
+    <dimen name="shop_goods_detail_add_height">40dp</dimen>
+    <dimen name="common_left_margin">16dp</dimen>
+    <dimen name="common_right_margin">16dp</dimen>
+    <dimen name="common_widget_margin">8dp</dimen>
+    <dimen name="common_widget_margin_min">4dp</dimen>
+    <dimen name="common_enter_into_width">20dp</dimen>
+    <dimen name="common_enter_into_height">20dp</dimen>
+    <!-- 头部 -->
+    <dimen name="common_titlebar_height">48dp</dimen>
+    <dimen name="common_titlebar_margin">16dp</dimen>
+    <!-- 集市Tab -->
+    <dimen name="jishi_tab_height">48dp</dimen>
+    <dimen name="financing_tab_content_height">45dp</dimen>
+    <dimen name="financing_tab_line">1dp</dimen>
+</resources>

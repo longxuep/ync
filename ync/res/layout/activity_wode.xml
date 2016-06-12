@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wode_header_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="308.55"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="132dp"
+                android:layout_weight="0.99"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/wode_ico"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wode_ico" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/wode_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/wode_set" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/wode_login_bg"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+"
+
+        			    <TextView
+          				      android:id="@+id/wode_login"
+          				      android:layout_width="wrap_content"
+        				        android:layout_height="wrap_content"
+                				android:gravity="center"
+                				android:padding="10dp"
+                				android:text="登录"
+                				android:textSize="18sp" />
+
+        			    <TextView
+          				      android:id="@+id/wode_register"
+          				      android:layout_width="wrap_content"
+        				        android:layout_height="wrap_content"
+                				android:gravity="center"
+                				android:padding="10dp"
+                				android:text="注册"
+                				android:textSize="18sp" />
+        			            			    
+                    </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/wode_jifeng"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@drawable/title_header_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="积分 0.0"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/wode_shopcart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@drawable/title_header_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="购物车 0.00"
+                android:textSize="15dp" />
+        </LinearLayout>
+        
+        
+        <RelativeLayout
+            android:id="@+id/wode_dingdan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2px"
+            android:background="#ffffffff" >
+
+            <ImageView
+                android:id="@+id/img_dingdan"
+                android:layout_width="44px"
+                android:layout_height="44px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@drawable/lefticon_orders" />
+
+            <ImageView
+                android:id="@+id/view_next1"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="52px"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24px"
+                android:layout_toRightOf="@id/img_dingdan"
+                android:gravity="center"
+                android:text="我的订单"
+                android:textSize="32px" />
+        </RelativeLayout>        
+        
+        <RelativeLayout
+            android:id="@+id/wode_shoucang"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2px"
+            android:background="#ffffffff" >
+
+            <ImageView
+                android:id="@+id/img_shoucang"
+                android:layout_width="44px"
+                android:layout_height="44px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@drawable/lefticon_update" />
+
+            <ImageView
+                android:id="@+id/view_next2"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="52px"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24px"
+                android:layout_toRightOf="@id/img_shoucang"
+                android:gravity="center"
+                android:text="我的收藏"
+                android:textSize="32px" />
+        </RelativeLayout>          
+        
+    <RelativeLayout
+            android:id="@+id/wode_no"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2px"
+            android:background="#ffffffff" >
+
+        </RelativeLayout>            
+        
+        
+    </LinearLayout>
+
+</ScrollView>

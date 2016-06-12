@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- example: -->
+    <!-- <color name="opaque_red">#f00</color>
+    <color name="translucent_red">#80ff0000</color> -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#42454A</color>
+    <color name="gray">#ebe9e9</color>
+    <color name="dark_gray">#a3a3a3</color>
+    <color name="trans_gray">#5da3a3a3</color>
+    <color name="trans_black">#3d000000</color>
+    <color name="green">#78c27c</color>
+    <color name="blue">#9ccbf1</color>
+    <color name="red">#ff0000</color>
+    <color name="orange" >#F2B531</color>
+    <color name="text_green">#257613</color>
+    <color name="text_gray">#A89C88</color>
+    <color name="bg_gray">#f2f2f2</color>
+    
+    <color name="background_tab_pressed">#6633B5E5</color>
+</resources>

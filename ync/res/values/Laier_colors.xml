@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 订单中的颜色 -->
+    <color name="order_line_yellow">#F7D079</color>
+    <color name="order_line_green_light">#7ACCA4</color>
+    <color name="order_line_green">#A2C66F</color>
+    <color name="order_line_blue_light">#8FC8E3</color>
+    <color name="order_text_cancel">#9A9A9A</color>
+    <color name="order_text_green">#057507</color>
+    <!-- 公用颜色 -->
+    <color name="common_money_green">#0B7D0B</color>
+    <color name="common_text_intro">#656565</color>
+    <color name="common_text_black">#333333</color>
+    <color name="common_gray">#E6E6E6</color>
+    <color name="common_green">#0B7D0B</color>
+    <color name="common_line_gray">#DFDFDF</color>
+    <color name="common_tab_normal">#676767</color>
+    <color name="common_tab_selected">#FAB325</color>
+    <color name="common_base_bg">#F2F2F2</color>
+    <color name="common_titlebar_bg">#9FCA34</color>
+    <color name="common_green_bg">#9FCA34</color>
+    <!-- 集市颜色 -->
+    <color name="financing_base_bg">#F2F2F2</color>
+    <color name="financing_green">#9FCA34</color>
+    <color name="financing_yellow">#F4B42E</color>
+    <color name="financing_gray">#CCCCCC</color>
+    <color name="financing_text_gray">#9C9C9C</color>
+    <color name="financing_text_black">#000000</color>
+    <color name="jishi_tab_text_selected">#A1C638</color>
+    <color name="financing_tab_text_normal">#9C9C9C</color>
+    <color name="financing_tab_line">#8FB720</color>
+    <color name="financing_home_text_black">#666666</color>
+    <color name="financing_home_table_line">#95B931</color>
+    <color name="financing_home_table_bg">#DBE9B8</color>
+    <!-- 用户模块颜色 -->
+    <color name="user_text_gray">#9C9C9C</color>
+    <color name="user_text_black">#000000</color>
+</resources>

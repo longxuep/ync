@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- example: -->
+    <!-- <dimen name="textview_height">25dp</dimen>
+    <dimen name="textview_width">150dp</dimen>
+    <dimen name="ball_radius">30dp</dimen>
+    <dimen name="font_size">16sp</dimen> -->
+    
+    <!-- @ 通用高度 -->
+    <dimen name="h1">1dp</dimen>
+    <dimen name="h8">8dp</dimen>
+    <dimen name="h12">12dp</dimen>
+    <dimen name="h20">20dp</dimen>
+    <dimen name="h36">36dp</dimen>
+    <dimen name="h48">48dp</dimen>
+    <dimen name="h60">60dp</dimen>
+    <dimen name="h80">80dp</dimen>
+    <dimen name="h120">120dp</dimen>
+    
+    <!-- @ 通用 边距 -->
+    <dimen name="d4">4dp</dimen>
+    <dimen name="d8">8dp</dimen>
+    <dimen name="d16">16dp</dimen>
+    <dimen name="d24">24dp</dimen>
+    <dimen name="d36">36dp</dimen>
+    <dimen name="d48">48dp</dimen>
+    
+    <dimen name="topbar_height">54dp</dimen><!-- 顶部bar高度 -->
+    <dimen name="topbar_search_height">28dp</dimen><!-- 顶部bar输入框高度 -->
+    <dimen name="tabbar_height">56dp</dimen><!-- 底部bar高度 -->
+    <dimen name="topbar_back_left_margin">16dp</dimen><!-- 底部bar高度 -->
+    <dimen name="user_listview_item_login">160dp</dimen><!-- 底部bar高度 -->
+</resources>

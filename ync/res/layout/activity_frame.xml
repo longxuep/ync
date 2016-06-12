@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/frame_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/frame_bottemView" />
+
+    <LinearLayout
+        android:id="@+id/frame_bottemView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tab_bar_bg"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_xiangcun"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_xiangcun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xiangcun_pressed" />
+
+            <TextView
+                android:id="@+id/tv_xiangcun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="乡村"
+                android:textColor="#00b80c"
+                android:textSize="13dp" />
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:id="@+id/ll_jishi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_jishi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yzc_jishi" />
+
+            <TextView
+                android:id="@+id/tv_jishi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="集市"
+                android:textColor="@color/yzc_textcolor"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_wode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_wode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yzc_wode" />
+
+            <TextView
+                android:id="@+id/tv_wode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textColor="@color/yzc_textcolor"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

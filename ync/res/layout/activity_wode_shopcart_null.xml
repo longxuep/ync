@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/d16"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:text="购物车还是空的，去集市逛逛吧~~" />
+
+    <Button
+        android:id="@+id/btn_goshop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/d24"
+        android:background="@drawable/btn_green"
+        android:singleLine="true"
+        android:text="去集市"
+        android:textColor="@color/white" />
+
+</LinearLayout>

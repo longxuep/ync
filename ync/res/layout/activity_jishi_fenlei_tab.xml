@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/jishi_tab_height"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_weight="0.34"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/financing_out_tab_bank_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="switchBank"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/financing_out_tab_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jishi_fenlei1"
+                android:textColor="@color/jishi_tab_text_selected"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="18dp"
+            android:background="@color/financing_gray" />
+
+        <LinearLayout
+            android:id="@+id/financing_out_tab_balance_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="switchBalance" >
+
+            <TextView
+                android:id="@+id/financing_out_tab_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jishi_fenlei2"
+                android:textColor="@color/financing_tab_text_normal"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="18dp"
+            android:background="@color/financing_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_jishi_fenlei3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="switchBalance" >
+
+            <TextView
+                android:id="@+id/tv_jishi_fenlei3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jishi_fenlei3"
+                android:textColor="@color/financing_tab_text_normal"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/financing_out_tab_line"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/financing_tab_line"
+        android:background="@color/financing_green" />
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">云中村</string>
+    <!-- example: -->
+    <!--
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+    </string-array>
+    -->
+    <string name="network_not_connected">网络连接失败，请检查网络设置</string>
+    <string name="xml_parser_failed">数据解析异常</string>
+    <string name="io_exception_error">文件流异常</string>
+    <string name="http_status_code_error">网络异常，错误码：%d</string>
+    <string name="http_exception_error">网络异常，请求超时</string>
+    <string name="socket_exception_error">网络异常，读取数据超时</string>
+    <string name="app_run_code_error">应用程序运行时异常</string>
+    <string name="title_activity_set">设置</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- 主菜单 -->
+    <string name="next">下一步</string>
+    <string name="finish">完成</string>
+
+    <!-- 主菜单 -->
+    <string name="menu_shop">商城</string>
+    <string name="menu_search">分类</string>
+    <string name="menu_cart">购物车</string>
+    <string name="menu_user">我的</string>
+
+    <!-- 顶部标题 -->
+    <string name="title_main">首页</string>
+    <string name="title_cart">购物车</string>
+    <string name="title_search">分类</string>
+    <string name="title_user">个人中心</string>
+    <string name="city_name">城市</string>
+
+    <!-- 加载失败页面 -->
+    <string name="loading_failed_msg">找不到网页</string>
+    <string name="loading_failed_refresh">点击刷新</string>
+
+    <!-- 个人中心 -->
+    <string name="user_btn_login">登录</string>
+    <string name="user_btn_regster">同意协议并注册</string>
+
+    <!-- common -->
+    <string name="title_login">登录</string>
+    <string name="title_findpwd">找回密码</string>
+    <string name="title_register">注册</string>
+    <string name="common_hint_phone">请输入手机号</string>
+    <string name="common_hint_verifycode">请输入验证码</string>
+    <string name="common_hint_msgcode">请输入手机短信验证码</string>
+    <string name="common_hint_pwd">请输入密码</string>
+    <string name="common_hint_confirm_pwd">请再次输入密码</string>
+    <string name="common_btn_find_pwd">找回密码</string>
+    <string name="common_btn_register">快速注册</string>
+    <string name="common_btn_verifycode">验证码</string>
+   
+</resources>

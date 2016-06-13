@@ -11,22 +11,47 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />    
-    
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 百度定位权限 start -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 百度定位权限 end -->
+
+
     <!-- 禁止屏幕随手机旋转变化  android:screenOrientation="值"  landscape = 横向  portrait = 纵向 -->
-    <!-- 避免在转屏时重启Activity android:configChanges="keyboardHidden|orientation" -->    
-    
-  <application
-      	android:name="com.alec.ync.application.YncApplication"
+    <!-- 避免在转屏时重启Activity android:configChanges="keyboardHidden|orientation" -->
+
+    <application
+        android:name="com.alec.ync.application.YncApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
 
-       <activity
+        <!-- 百度定位SDK APPKEY -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="UtqLyu0rfUjl4d1Dg1T6Lyko4mtRxmae" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+         <!-- 百度定位 KEY -->
+        <activity
             android:name="com.alec.ync.StartActivity"
-            android:screenOrientation="portrait" 
             android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,92 +59,64 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-       <activity 
-            android:name="com.alec.ync.FrameActivity" 
+        <activity
+            android:name="com.alec.ync.FrameActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" />
-        
-       
-       <!-- 乡村主页 -->        
-       <activity 
-            android:name="com.alec.ync.XiangcunActivity" 
+        <!-- 乡村主页-位置页面 -->
+        <activity
+            android:name="com.alec.ync.XiangcunDingweiActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait" />
-       <!-- 乡村主页-位置页面 -->        
-       <activity 
-            android:name="com.alec.ync.XiangcunDingweiActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 乡村主页-搜索页面 -->
+        <activity
+            android:name="com.alec.ync.XiangcunSearchActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" />
-       <!-- 乡村主页-搜索页面 -->        
-       <activity 
-            android:name="com.alec.ync.XiangcunSearchActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的页面-用户登录 -->
+        <activity
+            android:name="com.alec.ync.WodeLoginActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" />
-       
-       
-       
-       <activity 
-            android:name="com.alec.ync.JishiActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的页面-用户注册 -->
+        <activity
+            android:name="com.alec.ync.WodeRegisterActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait" />     
-            
-       
-       
-       
-       
-       <!-- 我的主页 --> 
-       <activity 
-            android:name="com.alec.ync.WodeActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的页面-用户购物车 -->
+        <activity
+            android:name="com.alec.ync.WodeShopCartActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait" />
-       <!-- 我的页面-用户登录 -->
-       <activity 
-            android:name="com.alec.ync.WodeLoginActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的页面-设置信息 -->
+        <activity
+            android:name="com.alec.ync.WodeSetActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" />
-       <!-- 我的页面-用户注册 -->
-       <activity 
-            android:name="com.alec.ync.WodeRegisterActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的页面-设置信息-使用帮助 -->
+        <activity
+            android:name="com.alec.ync.WodeSetHelpActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" />     
-       <!-- 我的页面-用户购物车 -->
-       <activity 
-            android:name="com.alec.ync.WodeShopCartActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的页面-设置信息-关于我们 -->
+        <activity
+            android:name="com.alec.ync.WodeSetGuangyuActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" />                
-       <!-- 我的页面-设置信息 -->     
-       <activity 
-            android:name="com.alec.ync.WodeSetActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的页面-设置信息-意见反馈 -->
+        <activity
+            android:name="com.alec.ync.WodeSetFankuiActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" />       
-       <!-- 我的页面-设置信息-使用帮助 -->     
-       <activity 
-            android:name="com.alec.ync.WodeSetHelpActivity" 
-            android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" />  
-       <!-- 我的页面-设置信息-关于我们 -->     
-       <activity 
-            android:name="com.alec.ync.WodeSetGuangyuActivity" 
-            android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" /> 
-       <!-- 我的页面-设置信息-意见反馈 -->     
-       <activity 
-            android:name="com.alec.ync.WodeSetFankuiActivity" 
-            android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:screenOrientation="portrait" />        
-       
-       
-       
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
     </application>
 
 </manifest>

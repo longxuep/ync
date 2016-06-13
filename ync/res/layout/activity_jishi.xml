@@ -10,13 +10,13 @@
         android:background="@drawable/header_bg" >
 
         <TextView
-            android:id="@+id/jishi_dw"
+            android:id="@+id/xiangcun_dingwei"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:gravity="center"
             android:paddingLeft="@dimen/_20px"
-            android:text="海口市>"
+            android:text="定位中 >"
             android:textColor="@color/yzc_textcolor"
             android:textSize="18sp" />
 
@@ -24,19 +24,35 @@
             android:id="@+id/jishi_search"
             android:layout_width="@dimen/_96px"
             android:layout_height="@dimen/_96px"
-            android:padding="@dimen/_20px"
             android:layout_toLeftOf="@+id/jishi_filter"
+            android:padding="@dimen/_20px"
             android:src="@drawable/jishi_search" />
 
         <ImageView
             android:id="@+id/jishi_filter"
             android:layout_width="@dimen/_96px"
             android:layout_height="@dimen/_96px"
-            android:padding="@dimen/_20px"
             android:layout_alignParentRight="true"
+            android:padding="@dimen/_20px"
             android:src="@drawable/jishi_filter" />
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <com.alec.ync.widget.TabPageIndicator
+            android:id="@+id/pagertab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_102px"
+            android:background="#ffffff" />
 
-    <include layout="@layout/activity_jishi_fenlei" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_2px" >
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+    <!-- <include layout="@layout/activity_jishi_fenlei" /> -->
 
 </LinearLayout>

@@ -9,6 +9,10 @@ package com.alec.yzc;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int vpiTabPageIndicatorStyle=0x7f010000;
     }
     public static final class color {
         public static final int background_tab_pressed=0x7f04002d;
@@ -57,6 +61,8 @@ public final class R {
         public static final int red=0x7f040028;
         public static final int text_gray=0x7f04002b;
         public static final int text_green=0x7f04002a;
+        public static final int title_tab_normal=0x7f04002f;
+        public static final int title_tab_select=0x7f04002e;
         public static final int trans_black=0x7f040025;
         public static final int trans_gray=0x7f040024;
         /**  example: 
@@ -69,7 +75,7 @@ public final class R {
          */
         public static final int user_text_gray=0x7f04001d;
         public static final int white=0x7f040020;
-        public static final int yzc_textcolor=0x7f04002e;
+        public static final int yzc_textcolor=0x7f040030;
     }
     public static final class dimen {
         public static final int _1000px=0x7f05040b;
@@ -1589,84 +1595,91 @@ public final class R {
         public static final int zhanghao_ico=0x7f020031;
     }
     public static final class id {
-        public static final int ImageView01=0x7f090014;
-        public static final int TextView01=0x7f090016;
-        public static final int TextView02=0x7f090015;
-        public static final int TextView03=0x7f090018;
-        public static final int TextView04=0x7f090017;
-        public static final int btn_goshop=0x7f09002f;
-        public static final int financing_out_tab_balance=0x7f09001f;
-        public static final int financing_out_tab_balance_layout=0x7f09001e;
-        public static final int financing_out_tab_bank=0x7f09001d;
-        public static final int financing_out_tab_bank_layout=0x7f09001c;
-        public static final int financing_out_tab_line=0x7f090012;
-        public static final int financing_out_tab_line1=0x7f090031;
-        public static final int financing_out_tab_line2=0x7f090037;
-        public static final int financing_out_tab_line3=0x7f090034;
-        public static final int financing_out_tab_line4=0x7f09003b;
-        public static final int fragment01linear=0x7f09004d;
+        public static final int ImageView01=0x7f090016;
+        public static final int TextView01=0x7f090018;
+        public static final int TextView02=0x7f090017;
+        public static final int TextView03=0x7f09001a;
+        public static final int TextView04=0x7f090019;
+        public static final int btn_goshop=0x7f090031;
+        public static final int financing_out_tab_balance=0x7f090021;
+        public static final int financing_out_tab_balance_layout=0x7f090020;
+        public static final int financing_out_tab_bank=0x7f09001f;
+        public static final int financing_out_tab_bank_layout=0x7f09001e;
+        public static final int financing_out_tab_line=0x7f090014;
+        public static final int financing_out_tab_line1=0x7f090033;
+        public static final int financing_out_tab_line2=0x7f090039;
+        public static final int financing_out_tab_line3=0x7f090036;
+        public static final int financing_out_tab_line4=0x7f09003d;
+        public static final int fragment01linear=0x7f090054;
         public static final int frame_bottemView=0x7f090001;
-        public static final int frame_pager=0x7f090000;
-        public static final int getyzm=0x7f09003a;
-        public static final int imageView1=0x7f09000f;
-        public static final int img_dingdan=0x7f090029;
-        public static final int img_fankui=0x7f090042;
-        public static final int img_guangyu=0x7f090040;
-        public static final int img_help=0x7f09003e;
+        public static final int frame_layout=0x7f090000;
+        public static final int getyzm=0x7f09003c;
+        public static final int imageView1=0x7f090011;
+        public static final int img_dingdan=0x7f09002b;
+        public static final int img_fankui=0x7f090044;
+        public static final int img_guangyu=0x7f090042;
+        public static final int img_help=0x7f090040;
         public static final int img_jishi=0x7f090006;
-        public static final int img_mima=0x7f090035;
-        public static final int img_shoucang=0x7f09002c;
-        public static final int img_update=0x7f090045;
+        public static final int img_mima=0x7f090037;
+        public static final int img_shoucang=0x7f09002e;
+        public static final int img_update=0x7f090047;
         public static final int img_wode=0x7f090009;
         public static final int img_xiangcun=0x7f090003;
-        public static final int img_zhanghao=0x7f090032;
-        public static final int jishi_content=0x7f09000e;
-        public static final int jishi_dw=0x7f09000b;
+        public static final int img_zhanghao=0x7f090034;
+        public static final int jishi_content=0x7f090010;
         public static final int jishi_filter=0x7f09000d;
         public static final int jishi_search=0x7f09000c;
-        public static final int listView1=0x7f090013;
+        public static final int listView1=0x7f090015;
+        public static final int ll_indicator=0x7f09004e;
         public static final int ll_jishi=0x7f090005;
-        public static final int ll_jishi_fenlei3=0x7f090020;
+        public static final int ll_jishi_fenlei3=0x7f090022;
         public static final int ll_wode=0x7f090008;
         public static final int ll_xiangcun=0x7f090002;
-        public static final int login=0x7f090038;
-        public static final int pwd=0x7f090036;
-        public static final int textView1=0x7f090010;
-        public static final int textView2=0x7f090011;
-        public static final int textView3=0x7f090019;
-        public static final int textView4=0x7f09001a;
-        public static final int textView5=0x7f09001b;
+        public static final int login=0x7f09003a;
+        public static final int one_item_image=0x7f090051;
+        public static final int one_item_title=0x7f090052;
+        public static final int one_listview=0x7f090050;
+        public static final int pagertab=0x7f09000e;
+        public static final int pwd=0x7f090038;
+        public static final int textView1=0x7f090012;
+        public static final int textView2=0x7f090013;
+        public static final int textView3=0x7f09001b;
+        public static final int textView4=0x7f09001c;
+        public static final int textView5=0x7f09001d;
         public static final int tv_jishi=0x7f090007;
-        public static final int tv_jishi_fenlei3=0x7f090021;
+        public static final int tv_jishi_fenlei3=0x7f090023;
         public static final int tv_wode=0x7f09000a;
         public static final int tv_xiangcun=0x7f090004;
-        public static final int username=0x7f090033;
-        public static final int view_next1=0x7f09002a;
-        public static final int view_next2=0x7f09002d;
-        public static final int view_next3=0x7f090043;
-        public static final int view_next4=0x7f090046;
-        public static final int wode_dingdan=0x7f090028;
-        public static final int wode_fankui=0x7f090041;
-        public static final int wode_guangyu=0x7f09003f;
-        public static final int wode_help=0x7f09003d;
-        public static final int wode_ico=0x7f090022;
-        public static final int wode_jifeng=0x7f090026;
-        public static final int wode_login=0x7f090024;
-        public static final int wode_no=0x7f09002e;
-        public static final int wode_register=0x7f090025;
-        public static final int wode_set=0x7f090023;
-        public static final int wode_shopcart=0x7f090027;
-        public static final int wode_shoucang=0x7f09002b;
-        public static final int wode_update=0x7f090044;
-        public static final int wodeset_back=0x7f09003c;
-        public static final int wodesetfankui_back=0x7f090047;
-        public static final int wodesetguangyu_back=0x7f090048;
-        public static final int wodesethelp_back=0x7f090049;
-        public static final int xiangcun_dingwei=0x7f09004a;
-        public static final int xiangcun_search=0x7f09004b;
-        public static final int xiangcundingwei_back=0x7f090030;
-        public static final int xiangcunsearch_back=0x7f09004c;
-        public static final int yzm=0x7f090039;
+        public static final int two_item_gview=0x7f090053;
+        public static final int username=0x7f090035;
+        public static final int viewPager=0x7f09000f;
+        public static final int view_next1=0x7f09002c;
+        public static final int view_next2=0x7f09002f;
+        public static final int view_next3=0x7f090045;
+        public static final int view_next4=0x7f090048;
+        public static final int viewpager=0x7f09004d;
+        public static final int wode_dingdan=0x7f09002a;
+        public static final int wode_fankui=0x7f090043;
+        public static final int wode_guangyu=0x7f090041;
+        public static final int wode_help=0x7f09003f;
+        public static final int wode_ico=0x7f090024;
+        public static final int wode_jifeng=0x7f090028;
+        public static final int wode_login=0x7f090026;
+        public static final int wode_no=0x7f090030;
+        public static final int wode_register=0x7f090027;
+        public static final int wode_set=0x7f090025;
+        public static final int wode_shopcart=0x7f090029;
+        public static final int wode_shoucang=0x7f09002d;
+        public static final int wode_update=0x7f090046;
+        public static final int wodeset_back=0x7f09003e;
+        public static final int wodesetfankui_back=0x7f090049;
+        public static final int wodesetguangyu_back=0x7f09004a;
+        public static final int wodesethelp_back=0x7f09004b;
+        public static final int xiangcun_dingwei=0x7f09000b;
+        public static final int xiangcun_search=0x7f09004c;
+        public static final int xiangcundingwei_back=0x7f090032;
+        public static final int xiangcunsearch_back=0x7f09004f;
+        public static final int yzm=0x7f09003b;
     }
     public static final class layout {
         public static final int activity_frame=0x7f030000;
@@ -1690,10 +1703,13 @@ public final class R {
         public static final int activity_xiangcun=0x7f030012;
         public static final int activity_xiangcun_fenlei=0x7f030013;
         public static final int activity_xiangcun_list=0x7f030014;
-        public static final int activity_xiangcun_list_detail=0x7f030015;
-        public static final int activity_xiangcundingwei=0x7f030016;
-        public static final int activity_xiangcunsearch=0x7f030017;
-        public static final int fragment_my01=0x7f030018;
+        public static final int activity_xiangcundingwei=0x7f030015;
+        public static final int activity_xiangcunsearch=0x7f030016;
+        public static final int fragment_jshi_one=0x7f030017;
+        public static final int fragment_jshi_one_item=0x7f030018;
+        public static final int fragment_jshi_three=0x7f030019;
+        public static final int fragment_jshi_two=0x7f03001a;
+        public static final int fragment_my01=0x7f03001b;
     }
     public static final class menu {
         public static final int main=0x7f080000;

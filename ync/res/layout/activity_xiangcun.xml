@@ -2,12 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/_96px"
-        android:background="@drawable/header_bg">
+        android:background="@drawable/header_bg" >
 
         <TextView
             android:id="@+id/xiangcun_dingwei"
@@ -16,19 +17,151 @@
             android:layout_alignParentLeft="true"
             android:gravity="center_vertical"
             android:padding="@dimen/_20px"
-            android:text="海口市>"
+            android:text="定位中>"
             android:textColor="@color/yzc_textcolor"
             android:textSize="18sp" />
+
         <ImageView
             android:id="@+id/xiangcun_search"
             android:layout_width="@dimen/_96px"
             android:layout_height="@dimen/_96px"
-            android:gravity="center_vertical"
-            android:layout_centerInParent="true"
-            android:padding="@dimen/_20px"
             android:layout_alignParentRight="true"
-            android:src="@drawable/xiangcun_search" />        
-        
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_20px"
+            android:src="@drawable/xiangcun_search" />
     </RelativeLayout>
-    <include layout="@layout/activity_xiangcun_list_detail" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300px"
+        android:layout_margin="@dimen/_10px"
+        android:background="@drawable/jishi_xcnf"
+        android:gravity="center_horizontal" >
+
+        <com.alec.ync.widget.LoopViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_14px"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200px"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10px" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/_5px"
+                android:layout_weight="1"
+                android:background="@drawable/jishi_xcnf"
+                android:gravity="center"
+                android:text="花景"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/_5px"
+                android:layout_weight="1"
+                android:background="@drawable/jishi_xcnf"
+                android:gravity="center"
+                android:text="海景"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200px"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10px" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="@dimen/_5px"
+                android:layout_weight="1"
+                android:background="@drawable/jishi_xcnf"
+                android:gravity="center"
+                android:text="温泉"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/_5px"
+                android:layout_weight="1"
+                android:background="@drawable/jishi_xcnf"
+                android:gravity="center"
+                android:text="古村"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10px"
+        android:background="@drawable/jishi_xcnf"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="某某村"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="采摘  垂钓  风景"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
 </LinearLayout>

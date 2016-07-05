@@ -2,24 +2,28 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
-	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
-	<classpathentry kind="lib" path="libs/android-support-v7-recyclerview.jar"/>
-	<classpathentry kind="lib" path="libs/BaiduLBS_Android.jar"/>
-	<classpathentry kind="lib" path="libs/eventbus.jar"/>
-	<classpathentry kind="lib" path="libs/hprose-lib.jar"/>
-	<classpathentry kind="lib" path="libs/mframework.jar"/>
-	<classpathentry kind="lib" path="libs/ormlite-android-4.48.jar"/>
-	<classpathentry kind="lib" path="libs/ormlite-core-4.48.jar"/>
-	<classpathentry kind="lib" path="libs/photoview.jar"/>
-	<classpathentry kind="lib" path="libs/ShareSDK-Core-2.5.8.jar"/>
-	<classpathentry kind="lib" path="libs/ShareSDK-QQ-2.5.8.jar"/>
-	<classpathentry kind="lib" path="libs/ShareSDK-QZone-2.5.8.jar"/>
-	<classpathentry kind="lib" path="libs/ShareSDK-SinaWeibo-2.5.8.jar"/>
-	<classpathentry kind="lib" path="libs/ShareSDK-Wechat-2.5.8.jar"/>
-	<classpathentry kind="lib" path="libs/ShareSDK-Wechat-Core-2.5.8.jar"/>
-	<classpathentry kind="lib" path="libs/universal-image-loader-1.9.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/android-support-v7-recyclerview.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/BaiduLBS_Android.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/eventbus.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hprose-lib.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/mframework.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ormlite-android-4.48.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ormlite-core-4.48.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/photoview.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ShareSDK-Core-2.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ShareSDK-QQ-2.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ShareSDK-QZone-2.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ShareSDK-SinaWeibo-2.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ShareSDK-Wechat-2.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ShareSDK-Wechat-Core-2.5.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/universal-image-loader-1.9.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/volley.jar"/>
+	<classpathentry kind="lib" path="libs/org.apache.commons.lang_2.4.0.v201005080502.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/mediachooser-lib.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

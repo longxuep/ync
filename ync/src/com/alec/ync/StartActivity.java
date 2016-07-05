@@ -6,7 +6,6 @@ import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.view.KeyEvent;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -62,6 +61,12 @@ public class StartActivity extends BaseActivity {
 			finish();
 		};
 	};
+	
+	@Override
+	protected void onDestroy() {
+		locationService.stop();
+		super.onDestroy();
+	}
 	@Override
 	protected void onStart() {
 		// -----------location config ------------

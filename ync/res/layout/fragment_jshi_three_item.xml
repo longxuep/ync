@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_200px"
+        android:layout_weight="0.8"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/one_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200px"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="情侣游"
+            android:textColor="@color/white"
+            android:background="@color/red" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_200px"
+        android:layout_weight="1.2"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/_yl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="2天游"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/one_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/_yl"
+            android:layout_gravity="left"
+            android:text="这里是标题"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/one_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/one_item_title"
+            android:layout_gravity="left"
+            android:text="内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多内容很多"
+            android:textColor="@color/black"
+            android:lines="3"
+            android:ellipsize="end"
+            android:textSize="@dimen/_18px" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/one_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="价格"
+                android:textSize="@dimen/_18px" />
+
+            <TextView
+                android:id="@+id/one_item_sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_50px"
+                android:text="已售"
+                android:textSize="@dimen/_18px" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

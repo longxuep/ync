@@ -39,7 +39,7 @@ public class Jshi_TwoAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder viewHolder = null;
 		if (convertView == null) {
-			convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_jshi_one_item, null);
+			convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_jshi_two_item, null);
 			viewHolder = new ViewHolder();
 			viewHolder.title = (TextView) convertView.findViewById(R.id.one_item_title);
 			viewHolder.img = (ImageView) convertView.findViewById(R.id.one_item_image);

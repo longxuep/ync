@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.app.Application;
 
 import com.alec.ync.bdSDK.LocationService;
+import com.alec.ync.util.Constant;
+import com.alec.ync.util.ImageLoaders;
 /**
  * 整个项目的公共类
  * 这里可以放启动方法 或者是一些公共的类型 或者初始化一些方法 比如登录以后保持登录状态 
@@ -22,6 +24,11 @@ public class YncApplication extends Application {
 		super.onCreate();
 		activities = new ArrayList<Activity>();
 		locationService = new LocationService(getApplicationContext());
+		ImageLoaders.init(getApplicationContext());// 初始化下载图片模块
+		/* 注意，这里必须先调用，在调用此处初始化后的参数 */
+		
+		Constant.init(getApplicationContext());// 初始化文件缓存路径、接口地址
+		
 	}
 	
 	/********************** activities相关 **************************************/

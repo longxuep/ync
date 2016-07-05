@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/one_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200px"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/one_item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10px"
+        android:layout_gravity="left"
+        android:text="这里是标题"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/one_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:text="价格"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_18px" />
+
+        <TextView
+            android:id="@+id/one_item_sell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="已售"
+            android:textSize="@dimen/_18px" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -16,6 +16,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="这里是标题" />
+        android:text="这里是标题"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/one_item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="海南省三亚市|放养三皇鸡"
+        android:textSize="@dimen/_18px" />
 
 </LinearLayout>

@@ -9,6 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="2"
+        android:padding="@dimen/_20px"
+        android:horizontalSpacing="@dimen/_10px"
+        android:verticalSpacing="@dimen/_10px"
         android:scrollbars="none" />
 
 </RelativeLayout>

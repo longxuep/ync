@@ -152,7 +152,7 @@
             android:text="《云中村用户注册协议》" />
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/bt_reg"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="@dimen/d16"

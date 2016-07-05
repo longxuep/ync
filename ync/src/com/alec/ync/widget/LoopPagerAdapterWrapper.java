@@ -24,7 +24,7 @@ import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
+/*
  */
 public class LoopPagerAdapterWrapper extends PagerAdapter {
 

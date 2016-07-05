@@ -69,6 +69,12 @@
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 乡村主页- 乡村详情-->
+        <activity
+            android:name="com.alec.ync.activity.XiangCunDetailsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 乡村主页-搜索页面 -->
         <activity
             android:name="com.alec.ync.XiangcunSearchActivity"

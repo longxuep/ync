@@ -1,8 +1,5 @@
 package com.alec.ync;
 
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,9 +10,9 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alec.ync.frament.JishiFragment;
 import com.alec.ync.frament.WodeFragment;
@@ -142,13 +139,19 @@ public class FrameActivity extends FragmentActivity {
 		Tv_jishi.setTextColor(getResources().getColor(R.color.yzc_textcolor));
 		Tv_wode.setTextColor(getResources().getColor(R.color.yzc_textcolor));
 	}
+	@Override
+	public void onResume() {
+		super.onResume();
+		outTime = 0;
 
+	}
+	private long outTime = 0;// 退出间隔时间
 	/**
 	 * 返回按钮的监听，用来询问用户是否退出程序
 	 * */
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
+		/*if (keyCode == KeyEvent.KEYCODE_BACK) {
 			if (keyCode == KeyEvent.KEYCODE_BACK) {
 				Builder builder = new Builder(FrameActivity.this);
 				builder.setTitle("提示");
@@ -173,6 +176,22 @@ public class FrameActivity extends FragmentActivity {
 
 			}
 		}
-		return false;
+		return false;*/
+		// 监听菜单键
+		switch (keyCode) {
+		case KeyEvent.KEYCODE_MENU:
+			break;
+		case KeyEvent.KEYCODE_BACK:
+			long nowTime = System.currentTimeMillis() / 1000;
+			if (nowTime - outTime <= 2) {
+				finish();
+			} else {
+				Toast.makeText(this, "再次点击，退出程序！", Toast.LENGTH_SHORT).show();
+				outTime = nowTime;
+			}
+
+			return true;
+		}
+		return super.onKeyUp(keyCode, event);
 	}
 }

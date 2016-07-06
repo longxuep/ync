@@ -52,6 +52,12 @@ public class Constant {
 		public static final String Region=InterfaceURL.BASE_URL+"api/apiRegion.php";// 定位
 		
 		public static final String Citylist=InterfaceURL.BASE_URL+"api/apicitylist.php";//获取定位城市资源  参数 province 城市名称
+		
+		public static final String Village=InterfaceURL.BASE_URL+"api/apiVillage.php";// 乡村列表和乡村基础信息
+		
+		public static final String Villagecunli=InterfaceURL.BASE_URL+"api/apiVillagecunli.php";// 村里内容 参数：villageid
+		
+		public static final String VillageHuodongList=InterfaceURL.BASE_URL+"api/apiVillageHuodongList.php";//村里活动 参数：villageid
 	}
 	
 	@SuppressWarnings("deprecation")

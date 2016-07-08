@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_96px"
+        android:background="@drawable/header_bg" >
+
+        <TextView
+            android:id="@+id/xiangcundingwei_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/btn_back"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_20px"
+            android:text=" 返回"
+            android:textColor="@color/yzc_textcolor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="古村主题"
+            android:textColor="@color/yzc_textcolor"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/xiangcun_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/user_text_gray"
+        android:layout_below="@+id/rl"
+        android:layout_margin="@dimen/_10px"
+        android:dividerHeight="@dimen/_10px"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>

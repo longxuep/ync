@@ -53,7 +53,7 @@ public class Constant {
 		
 		public static final String Citylist=InterfaceURL.BASE_URL+"api/apicitylist.php";//获取定位城市资源  参数 province 城市名称
 		
-		public static final String Village=InterfaceURL.BASE_URL+"api/apiVillage.php";// 乡村列表和乡村基础信息
+		public static final String Village=InterfaceURL.BASE_URL+"api/apiVillage.php";// 乡村列表和乡村基础信息 catid=1&regionid=97
 		
 		public static final String Villagecunli=InterfaceURL.BASE_URL+"api/apiVillagecunli.php";// 村里内容 参数：villageid
 		

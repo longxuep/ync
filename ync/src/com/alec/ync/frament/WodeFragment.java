@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.alec.ync.WodeLoginActivity;
-import com.alec.ync.WodeRegisterActivity;
-import com.alec.ync.WodeSetActivity;
-import com.alec.ync.WodeShopCartActivity;
+import com.alec.ync.activity.WodeLoginActivity;
+import com.alec.ync.activity.WodeRegisterActivity;
+import com.alec.ync.activity.WodeSetActivity;
+import com.alec.ync.activity.WodeShopCartActivity;
 import com.alec.yzc.R;
 
 /**

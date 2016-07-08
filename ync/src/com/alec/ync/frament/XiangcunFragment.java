@@ -32,8 +32,10 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.alec.ync.XiangcunDingweiActivity;
-import com.alec.ync.XiangcunSearchActivity;
+import com.alec.ync.activity.XiangCunDetailsActivity;
+import com.alec.ync.activity.XiangcunDingweiActivity;
+import com.alec.ync.activity.XiangcunListActivity;
+import com.alec.ync.activity.XiangcunSearchActivity;
 import com.alec.ync.model.City;
 import com.alec.ync.model.ImageEntity;
 import com.alec.ync.model.VillageCat;
@@ -127,6 +129,8 @@ public class XiangcunFragment extends BaseFragment implements OnClickListener,
 		mSearch = (ImageView) v.findViewById(R.id.xiangcun_search);
 		item_listview = (MyListView) v.findViewById(R.id.item_listview);
 		item_listview.setOnItemClickListener(this);
+		
+		//在listview 第一行加入布局
 		LayoutInflater inflater = (LayoutInflater) getActivity()
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		addheaderview = inflater.inflate(
@@ -136,7 +140,8 @@ public class XiangcunFragment extends BaseFragment implements OnClickListener,
 		mDingwei.setOnClickListener(this);
 		mSearch.setOnClickListener(this);
 		item_gview = (GridView) item_listview.findViewById(R.id.item_gview);
-
+		item_gview.setOnItemClickListener(new XcGview());
+		
 		if (app != null && app.cityName != null) {
 			mDingwei.setText(app.cityName + " >");
 		}
@@ -318,7 +323,7 @@ public class XiangcunFragment extends BaseFragment implements OnClickListener,
 			showToastMsgShort("服务器链接错误");
 		}
 	};
-
+	//广告图下的 列表
 	private void showView(ArrayList<VillageCat> list) {
 		VillAdapter villAdapter = new VillAdapter(list);
 		item_gview.setAdapter(villAdapter);
@@ -424,8 +429,12 @@ public class XiangcunFragment extends BaseFragment implements OnClickListener,
 				viewHolder = new ViewHolder();
 				viewHolder.textView1 = (TextView) convertView
 						.findViewById(R.id.textView1);
-				// viewHolder.item_cat_image = (ImageView)
-				// convertView.findViewById(R.id.item_cat_image);
+				viewHolder.textView2 = (TextView) convertView
+						.findViewById(R.id.textView2);
+				viewHolder.textView3 = (TextView) convertView
+						.findViewById(R.id.textView3);
+				 viewHolder.item_listview_image = (ImageView)convertView.findViewById(R.id.item_listview_image);
+				convertView.setTag(viewHolder);
 				convertView.setTag(viewHolder);
 			} else {
 				viewHolder = (ViewHolder) convertView.getTag();
@@ -433,15 +442,15 @@ public class XiangcunFragment extends BaseFragment implements OnClickListener,
 			viewHolder.textView1
 					.setText(list.get(position).getRegion_name() != null ? list
 							.get(position).getRegion_name() : "");
-			// ImageLoaders.loadImage(vList.get(position).getCat_pic_url(),
-			// viewHolder.item_cat_image, R.drawable.default_image,
-			// R.drawable.error_image, null);
+			 ImageLoaders.loadImage(list.get(position).getFile_url(),
+			 viewHolder.item_listview_image, R.drawable.default_image,
+			 R.drawable.error_image, null);
 			return convertView;
 		}
 
 		public class ViewHolder {
-			private TextView textView1;
-			private ImageView item_cat_image;
+			private TextView textView1,textView2,textView3;
+			private ImageView item_listview_image;
 		}
 	}
 
@@ -468,11 +477,32 @@ public class XiangcunFragment extends BaseFragment implements OnClickListener,
 		}
 
 	}
+	//Gview的 OnItemClickListener点击事件
+	class XcGview implements OnItemClickListener{
 
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			if(vList!=null&&vList.size()>0){
+				VillageCat vc=vList.get(position);
+				Intent i=new Intent(getActivity(),XiangcunListActivity.class);
+				i.putExtra("cat_id",vc.getCat_id()+"");
+				startActivity(i);
+			}
+		}
+		
+	}
+	//listView 列表点击事件
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-
+		int positions=position-1;
+		if(cityList!=null&&cityList.size()>0){
+			City ct=cityList.get(positions);
+			Intent i=new Intent(getActivity(),XiangCunDetailsActivity.class);
+			i.putExtra("region_id", ct.getRegion_id()+"");//把id传过去
+			startActivity(i);
+		}
 	}
 
 	@Override

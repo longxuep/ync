@@ -1,7 +1,7 @@
 package com.alec.ync.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.alec.ync.application.YncApplication;
 import com.alec.ync.util.ToastManager;
@@ -12,7 +12,7 @@ import com.android.volley.toolbox.Volley;
  * @author long
  * @date 2016Äê6ÔÂ13ÈÕ14:54:59
  */
-public class BaseActivity extends Activity {
+public class BaseActivity extends FragmentActivity {
 	protected  YncApplication app;
 	public RequestQueue mRequestQueue;
 	@Override

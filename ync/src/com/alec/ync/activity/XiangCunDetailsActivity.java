@@ -1,8 +1,11 @@
 package com.alec.ync.activity;
 
+import java.util.HashMap;
+
+import org.json.JSONObject;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
@@ -17,21 +20,36 @@ import com.alec.ync.frament.Details_meijingFragment;
 import com.alec.ync.frament.Details_meishiFragment;
 import com.alec.ync.frament.Details_minsuFragment;
 import com.alec.ync.frament.Details_techanFragment;
+import com.alec.ync.model.VillageCat;
 import com.alec.ync.util.AndroidShare;
+import com.alec.ync.util.Constant;
+import com.alec.ync.volley.HttpJsonObjectRequest;
 import com.alec.yzc.R;
-
-public class XiangCunDetailsActivity extends FragmentActivity implements OnClickListener{
+import com.android.volley.Request.Method;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.google.gson.Gson;
+/**
+ * 乡村详情 各种详情
+ * @author long
+ *
+ */
+public class XiangCunDetailsActivity extends BaseActivity implements OnClickListener{
 	private ImageView _back, _share;
 	private Fragment tempFragment;
 	private Fragment[] fragments;
+	private String region_id;
+	private HttpJsonObjectRequest request_info;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_xiangcundetails);
+		region_id = getIntent().getStringExtra("region_id")==null?"":getIntent().getStringExtra("region_id");//接收传过来的id
 		_back=(ImageView)findViewById(R.id.xiangcun_back);
 		_share=(ImageView)findViewById(R.id.xiangcun_share);
 		_back.setOnClickListener(this);
 		initView();
+		getData();
 	}
 	private void initView(){
 		fragments = new Fragment[8];
@@ -45,7 +63,45 @@ public class XiangCunDetailsActivity extends FragmentActivity implements OnClick
 		findViewById(R.id.view_mingsu).setOnClickListener(this);
 		setab(R.id.xiangcun_back);
 	}
+	// 获取乡村分类
+		private void getData() {
+			request_info = new HttpJsonObjectRequest(Method.GET,
+					Constant.Url.Villagecunli, null, successListener, errorListener,
+					new HashMap<String, String>(), this);
+			mRequestQueue.add(request_info);
+		}
 
+		Response.Listener<JSONObject> successListener = new Response.Listener<JSONObject>() {
+
+			@Override
+			public void onResponse(JSONObject response) {
+				try {
+					if (response != null) {
+						Gson gson = new Gson();
+						VillageCat vc = null;
+						if (response.get("code").equals("success")) {
+							if (response.optJSONArray("data") != null) {
+								showToastMsgShort("获取成功");
+							} else {
+								showToastMsgShort("暂无数据");
+							}
+						} else {
+							showToastMsgShort(response.get("msg").toString());
+						}
+					}
+				} catch (Exception e) {
+					showToastMsgShort("数据解析错误");
+				}
+			}
+		};
+
+		Response.ErrorListener errorListener = new Response.ErrorListener() {
+
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				showToastMsgShort("服务器链接错误");
+			}
+		};
 	@Override
 	public void onClick(View v) {
 		if(v!=null){

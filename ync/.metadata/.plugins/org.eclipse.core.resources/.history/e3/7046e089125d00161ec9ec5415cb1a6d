@@ -1,0 +1,43 @@
+package com.example.test;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.widget.ListView;
+
+/**
+ * 禁止划动
+ * 
+ * @author longhf
+ * 
+ */
+public class CustomListView extends ListView {
+	public CustomGridView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+	}
+
+	public CustomGridView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+
+	}
+
+	public CustomGridView(Context context) {
+		super(context);
+	}
+
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent ev) {
+
+		// 涓嬮潰杩欏彞璇濇槸鍏抽敭
+
+		if (ev.getAction() == MotionEvent.ACTION_MOVE) {
+
+			return true;
+
+		}
+
+		return super.dispatchTouchEvent(ev);// 涔熸湁鎵�涓嶅悓鍝�
+
+	}
+
+}

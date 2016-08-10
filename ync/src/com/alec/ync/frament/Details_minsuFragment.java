@@ -1,6 +1,7 @@
 package com.alec.ync.frament;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -42,5 +43,10 @@ public class Details_minsuFragment extends BaseFragment {
 	public void onDestroyView() {
 		((ViewGroup)view.getParent()).removeView(view);
 		super.onDestroyView();
+	}
+	@Override
+	protected Context getContext() {
+		// TODO Auto-generated method stub
+		return getActivity();
 	}
 }

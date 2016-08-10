@@ -6,6 +6,7 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -16,10 +17,12 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.alec.ync.application.YncApplication;
-import com.alec.ync.bdSDK.LocationService;
+import com.alec.ync.base.BaseActivity;
+import com.alec.ync.base.BaseContext;
 import com.alec.ync.model.City;
 import com.alec.ync.model.DataCity;
 import com.alec.ync.util.Constant;
+import com.alec.ync.util.LocationService;
 import com.alec.ync.volley.HttpJsonObjectRequest;
 import com.alec.yzc.R;
 import com.android.volley.Request.Method;
@@ -34,7 +37,7 @@ import com.google.gson.Gson;
  **/
 
 public class StartActivity extends BaseActivity {
-	public LocationService locationService;// 百度定位
+	private LocationService locationService; //百度定位
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +45,6 @@ public class StartActivity extends BaseActivity {
 		setContentView(R.layout.fragment_my01);
 		LinearLayout mLinear = (LinearLayout) findViewById(R.id.fragment01linear);
 		mLinear.setBackgroundResource(R.drawable.ic_splash_screen);
-
 		new Thread() {
 			public void run() {
 				try {
@@ -80,19 +82,22 @@ public class StartActivity extends BaseActivity {
 
 	@Override
 	protected void onStart() {
-		// -----------location config ------------
-		locationService = ((YncApplication) getApplication()).locationService;
-		// 获取locationservice实例，建议应用中只初始化1个location实例，然后使用，可以参考其他示例的activity，都是通过此种方式获取locationservice实例的
-		locationService.registerListener(mListener);
-		// 注册监听
-		int type = getIntent().getIntExtra("from", 0);
-		if (type == 0) {
-			locationService.setLocationOption(locationService
-					.getDefaultLocationClientOption());
-		} else if (type == 1) {
-			locationService.setLocationOption(locationService.getOption());
+		try {
+			// -----------location config ------------
+			locationService = ((YncApplication) getApplication()).locationService;
+			// 获取locationservice实例，建议应用中只初始化1个location实例，然后使用，可以参考其他示例的activity，都是通过此种方式获取locationservice实例的
+			locationService.registerListener(mListener);
+			// 注册监听
+			int type = getIntent().getIntExtra("from", 0);
+			if (type == 0) {
+				locationService.setLocationOption(locationService.getDefaultLocationClientOption());
+			} else if (type == 1) {
+				locationService.setLocationOption(locationService.getOption());
+			}
+			locationService.start(); //定位SDK
+		} catch (Exception e) {
 		}
-		locationService.start();// 定位SDK
+		
 		super.onStart();
 	}
 
@@ -119,8 +124,7 @@ public class StartActivity extends BaseActivity {
 
 		@Override
 		public void onReceiveLocation(BDLocation location) {
-			if (null != location
-					&& location.getLocType() != BDLocation.TypeServerError) {
+			if (null != location && location.getLocType() != BDLocation.TypeServerError) {
 				StringBuffer sb = new StringBuffer(256);
 				sb.append("time : ");
 				/**
@@ -129,33 +133,44 @@ public class StartActivity extends BaseActivity {
 				 */
 				sb.append(location.getTime());
 				sb.append("\nerror code : ");
-				sb.append(location.getLocType());
+				sb.append(location.getLocType());// 定位类型
 				sb.append("\nlatitude : ");
-				sb.append(location.getLatitude());
+				sb.append(location.getLatitude());// 纬度				
+				app.latitude = location.getLatitude();
 				sb.append("\nlontitude : ");
-				sb.append(location.getLongitude());
+				sb.append(location.getLongitude());// 经度
+				app.longitude = location.getLongitude();
 				sb.append("\nradius : ");
-				sb.append(location.getRadius());
+				sb.append(location.getRadius());// 半径
+				sb.append("\nCountryCode : ");
+				sb.append(location.getCountryCode());// 国家码
+				sb.append("\nCountry : ");
+				sb.append(location.getCountry());// 国家名称
 				sb.append("\ncitycode : ");
-				sb.append(location.getCityCode());
+				sb.append(location.getCityCode());// 城市编码
 				sb.append("\ncity : ");
-				sb.append(location.getCity());
+				sb.append(location.getCity());// 城市
 				sb.append("\nDistrict : ");
-				sb.append(location.getDistrict());
+				sb.append(location.getDistrict());// 区
 				sb.append("\nStreet : ");
-				sb.append(location.getStreet());
+				sb.append(location.getStreet());// 街道
 				sb.append("\naddr : ");
-				sb.append(location.getAddrStr());
+				sb.append(location.getAddrStr());// 地址信息
+				app.address = location.getAddrStr();
 				sb.append("\nDescribe: ");
 				sb.append(location.getDirection());
-				sb.append("\nPoi: ");
+				sb.append("\nPoi: ");				   
+				sb.append("\n省:");
+			    sb.append(location.getProvince());
 				if (location.getLocType() == BDLocation.TypeGpsLocation) {// GPS定位结果
 					sb.append("\nspeed : ");
-					sb.append(location.getSpeed());// 单位：km/h
+					sb.append(location.getSpeed());// 速度 单位：km/h
 					sb.append("\nsatellite : ");
-					sb.append(location.getSatelliteNumber());
+					sb.append(location.getSatelliteNumber());// 卫星数目
 					sb.append("\nheight : ");
-					sb.append(location.getAltitude());// 单位：米
+					sb.append(location.getAltitude());// 海拔高度 单位：米
+					sb.append("\ngps status : ");
+                    sb.append(location.getGpsAccuracyStatus());// *****gps质量判断*****
 					sb.append("\ndescribe : ");
 					sb.append("gps定位成功");
 				} else if (location.getLocType() == BDLocation.TypeNetWorkLocation) {// 网络定位结果
@@ -183,6 +198,8 @@ public class StartActivity extends BaseActivity {
 					setDateSDK(location, false, sb);
 					return;
 				}
+				System.out.print(sb.toString());
+				System.out.print(app.longitude+""+"/"+app.longitude+"");
 				setDateSDK(location, true, sb);
 			}
 		}
@@ -210,5 +227,10 @@ public class StartActivity extends BaseActivity {
 				
 			}
 		}
+	}
+
+	@Override
+	protected Context getContext() {
+		return this;
 	}
 }

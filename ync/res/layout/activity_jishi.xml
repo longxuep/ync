@@ -26,7 +26,7 @@
             android:layout_height="@dimen/_96px"
             android:layout_toLeftOf="@+id/jishi_filter"
             android:padding="@dimen/_20px"
-            android:src="@drawable/jishi_search" />
+            android:src="@drawable/search" />
 
         <ImageView
             android:id="@+id/jishi_filter"
@@ -34,7 +34,7 @@
             android:layout_height="@dimen/_96px"
             android:layout_alignParentRight="true"
             android:padding="@dimen/_20px"
-            android:src="@drawable/jishi_filter" />
+            android:src="@drawable/filter" />
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"

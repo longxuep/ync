@@ -10,17 +10,100 @@ package com.alec.yzc;
 public final class R {
     public static final class anim {
         public static final int alpha_anim=0x7f040000;
-        public static final int slide_from_bottom=0x7f040001;
-        public static final int slide_out_bottom=0x7f040002;
+        public static final int listview_reverse_anim=0x7f040001;
+        public static final int listview_rotating=0x7f040002;
+        public static final int slide_from_bottom=0x7f040003;
+        public static final int slide_out_bottom=0x7f040004;
     }
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int barColor=0x7f010001;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int barSpinCycleTime=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int barWidth=0x7f010008;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circleRadius=0x7f010006;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fillRadius=0x7f010007;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int progressIndeterminate=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int rimColor=0x7f010002;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int rimWidth=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int spinSpeed=0x7f010004;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int vpiTabPageIndicatorStyle=0x7f010000;
+        public static final int vpiTabPageIndicatorStyle=0x7f010009;
     }
     public static final class color {
-        public static final int background_tab_pressed=0x7f05002d;
+        public static final int background_tab_pressed=0x7f050033;
+        public static final int bg=0x7f05002e;
         public static final int bg_gray=0x7f05002c;
         public static final int black=0x7f050021;
         public static final int blue=0x7f050027;
@@ -51,9 +134,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int financing_text_black=0x7f050016;
         public static final int financing_text_gray=0x7f050015;
         public static final int financing_yellow=0x7f050013;
+        public static final int font_color=0x7f050030;
+        public static final int font_color2=0x7f050031;
         public static final int gray=0x7f050022;
         public static final int green=0x7f050026;
         public static final int jishi_tab_text_selected=0x7f050017;
+        public static final int line=0x7f05002d;
+        public static final int line2=0x7f050032;
+        public static final int list_item_normal=0x7f050036;
+        public static final int list_item_normal_trans=0x7f050037;
+        public static final int list_item_pressed=0x7f050038;
         public static final int orange=0x7f050029;
         public static final int order_line_blue_light=0x7f050003;
         public static final int order_line_green=0x7f050002;
@@ -66,8 +156,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int red=0x7f050028;
         public static final int text_gray=0x7f05002b;
         public static final int text_green=0x7f05002a;
-        public static final int title_tab_normal=0x7f05002f;
-        public static final int title_tab_select=0x7f05002e;
+        public static final int theme_color=0x7f05002f;
+        public static final int title_tab_normal=0x7f050035;
+        public static final int title_tab_select=0x7f050034;
         public static final int trans_black=0x7f050025;
         public static final int trans_gray=0x7f050024;
         /**  example: 
@@ -80,7 +171,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int user_text_gray=0x7f05001d;
         public static final int white=0x7f050020;
-        public static final int yzc_textcolor=0x7f050030;
+        public static final int yzc_textcolor=0x7f050039;
     }
     public static final class dimen {
         public static final int _1000px=0x7f06040b;
@@ -1548,114 +1639,229 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int user_listview_item_login=0x7f060021;
     }
     public static final class drawable {
-        public static final int btn_back=0x7f020000;
-        public static final int btn_green=0x7f020001;
-        public static final int btn_yellow_disabled=0x7f020002;
-        public static final int btn_yellow_normal=0x7f020003;
-        public static final int btn_yellow_selected=0x7f020004;
-        public static final int default_image=0x7f020005;
-        public static final int error_image=0x7f020006;
-        public static final int guangyu_logo=0x7f020007;
-        public static final int guidance_new1=0x7f020008;
-        public static final int guidance_new2=0x7f020009;
-        public static final int guidance_new3=0x7f02000a;
-        public static final int guidance_skip=0x7f02000b;
-        public static final int header_bg=0x7f02000c;
-        public static final int ic_launcher=0x7f02000d;
-        public static final int ic_splash_screen=0x7f02000e;
-        public static final int ico=0x7f02000f;
-        public static final int ico2=0x7f020010;
-        public static final int ico3=0x7f020011;
-        public static final int jishi_filter=0x7f020012;
-        public static final int jishi_lyzq=0x7f020013;
-        public static final int jishi_lyzq_bg=0x7f020014;
-        public static final int jishi_lyzq_theme_bg=0x7f020015;
-        public static final int jishi_nhyj=0x7f020016;
-        public static final int jishi_nhyj_bg=0x7f020017;
-        public static final int jishi_normal=0x7f020018;
-        public static final int jishi_pressed=0x7f020019;
-        public static final int jishi_search=0x7f02001a;
-        public static final int jishi_tab_background=0x7f02001b;
-        public static final int jishi_tab_background_d=0x7f02001c;
-        public static final int jishi_tab_background_u=0x7f02001d;
-        public static final int jishi_xcnf=0x7f02001e;
-        public static final int lefticon_about=0x7f02001f;
-        public static final int lefticon_feedback=0x7f020020;
-        public static final int lefticon_orders=0x7f020021;
-        public static final int lefticon_service=0x7f020022;
-        public static final int lefticon_setting=0x7f020023;
-        public static final int lefticon_update=0x7f020024;
-        public static final int logo_other=0x7f020025;
-        public static final int logo_qq=0x7f020026;
-        public static final int logo_qzone=0x7f020027;
-        public static final int logo_shortmessage=0x7f020028;
-        public static final int logo_sinaweibo=0x7f020029;
-        public static final int logo_tencentweibo=0x7f02002a;
-        public static final int logo_wechat=0x7f02002b;
-        public static final int logo_wechatmoments=0x7f02002c;
-        public static final int mall_tab_linear_background=0x7f02002d;
-        public static final int mima_ico=0x7f02002e;
-        public static final int nhyj=0x7f02002f;
-        public static final int right_arrow=0x7f020030;
-        public static final int tab_bar_bg=0x7f020031;
-        public static final int title_header_bg=0x7f020032;
-        public static final int wode_header_bg=0x7f020033;
-        public static final int wode_ico=0x7f020034;
-        public static final int wode_login_bg=0x7f020035;
-        public static final int wode_normal=0x7f020036;
-        public static final int wode_pressed=0x7f020037;
-        public static final int wode_set=0x7f020038;
-        public static final int wode_tx=0x7f020039;
-        public static final int xcnf=0x7f02003a;
-        public static final int xiangcun_back=0x7f02003b;
-        public static final int xiangcun_beauty=0x7f02003c;
-        public static final int xiangcun_bg2=0x7f02003d;
-        public static final int xiangcun_cate=0x7f02003e;
-        public static final int xiangcun_collect=0x7f02003f;
-        public static final int xiangcun_hostel=0x7f020040;
-        public static final int xiangcun_index=0x7f020041;
-        public static final int xiangcun_location=0x7f020042;
-        public static final int xiangcun_location_ico=0x7f020043;
-        public static final int xiangcun_message=0x7f020044;
-        public static final int xiangcun_normal=0x7f020045;
-        public static final int xiangcun_pressed=0x7f020046;
-        public static final int xiangcun_search=0x7f020047;
-        public static final int xiangcun_share=0x7f020048;
-        public static final int xiangcun_speciality=0x7f020049;
-        public static final int xiangcun_stretch=0x7f02004a;
-        public static final int yzc_jishi=0x7f02004b;
-        public static final int yzc_wode=0x7f02004c;
-        public static final int yzc_xiangcun=0x7f02004d;
-        public static final int zhanghao_ico=0x7f02004e;
+        public static final int arrowscopie=0x7f020000;
+        public static final int bg_list_item=0x7f020001;
+        public static final int bg_list_item_trans=0x7f020002;
+        public static final int bg_login=0x7f020003;
+        public static final int bg_topbar_search=0x7f020004;
+        public static final int bottom_bar=0x7f020005;
+        public static final int btn_back=0x7f020006;
+        public static final int btn_green=0x7f020007;
+        public static final int btn_yellow_disabled=0x7f020008;
+        public static final int btn_yellow_normal=0x7f020009;
+        public static final int btn_yellow_selected=0x7f02000a;
+        public static final int calque=0x7f02000b;
+        public static final int chat_bg_default=0x7f02000c;
+        public static final int chat_from_msg=0x7f02000d;
+        public static final int chat_send_btn=0x7f02000e;
+        public static final int chat_send_msg=0x7f02000f;
+        public static final int chatfrom_bg_focused=0x7f020010;
+        public static final int chatfrom_bg_normal=0x7f020011;
+        public static final int chatfrom_bg_pressed=0x7f020012;
+        public static final int chatto_bg_focused=0x7f020013;
+        public static final int chatto_bg_normal=0x7f020014;
+        public static final int chatto_bg_pressed=0x7f020015;
+        public static final int default_image=0x7f020016;
+        public static final int error_image=0x7f020017;
+        public static final int filter=0x7f020018;
+        public static final int gg01=0x7f020019;
+        public static final int gg02=0x7f02001a;
+        public static final int gg03=0x7f02001b;
+        public static final int gg04=0x7f02001c;
+        public static final int guangyu_logo=0x7f02001d;
+        public static final int guidance_new1=0x7f02001e;
+        public static final int guidance_new2=0x7f02001f;
+        public static final int guidance_new3=0x7f020020;
+        public static final int guidance_skip=0x7f020021;
+        public static final int header_bg=0x7f020022;
+        public static final int hk=0x7f020023;
+        public static final int ic_action_person=0x7f020024;
+        public static final int ic_comment_normal=0x7f020025;
+        public static final int ic_comment_pressed=0x7f020026;
+        public static final int ic_launcher=0x7f020027;
+        public static final int ic_splash_screen=0x7f020028;
+        public static final int ic_tab_activity_off_night=0x7f020029;
+        public static final int ic_tab_image_on=0x7f02002a;
+        public static final int ic_tab_image_on_night=0x7f02002b;
+        public static final int ico=0x7f02002c;
+        public static final int ico2=0x7f02002d;
+        public static final int ico3=0x7f02002e;
+        public static final int ico_bg1=0x7f02002f;
+        public static final int ico_bg2=0x7f020030;
+        public static final int ico_daiyang=0x7f020031;
+        public static final int ico_daizhong=0x7f020032;
+        public static final int ico_hudong=0x7f020033;
+        public static final int ico_huodong=0x7f020034;
+        public static final int ico_meishi=0x7f020035;
+        public static final int ico_minsu=0x7f020036;
+        public static final int ico_nongchou=0x7f020037;
+        public static final int ico_techan=0x7f020038;
+        public static final int icon=0x7f020039;
+        public static final int icon_back=0x7f02003a;
+        public static final int icon_code=0x7f02003b;
+        public static final int icon_et_del=0x7f02003c;
+        public static final int icon_image=0x7f02003d;
+        public static final int icon_like=0x7f02003e;
+        public static final int icon_like_red=0x7f02003f;
+        public static final int icon_like_white=0x7f020040;
+        public static final int icon_lock_white_34=0x7f020041;
+        public static final int icon_more_action_normal=0x7f020042;
+        public static final int icon_more_action_pressed=0x7f020043;
+        public static final int icon_phone=0x7f020044;
+        public static final int icon_pwd=0x7f020045;
+        public static final int jishi_filter=0x7f020046;
+        public static final int jishi_lyzq=0x7f020047;
+        public static final int jishi_lyzq_bg=0x7f020048;
+        public static final int jishi_lyzq_theme_bg=0x7f020049;
+        public static final int jishi_nhyj=0x7f02004a;
+        public static final int jishi_nhyj_bg=0x7f02004b;
+        public static final int jishi_normal=0x7f02004c;
+        public static final int jishi_pressed=0x7f02004d;
+        public static final int jishi_search=0x7f02004e;
+        public static final int jishi_tab_background=0x7f02004f;
+        public static final int jishi_tab_background_d=0x7f020050;
+        public static final int jishi_tab_background_u=0x7f020051;
+        public static final int jishi_xcnf=0x7f020052;
+        public static final int lefticon_about=0x7f020053;
+        public static final int lefticon_feedback=0x7f020054;
+        public static final int lefticon_orders=0x7f020055;
+        public static final int lefticon_service=0x7f020056;
+        public static final int lefticon_setting=0x7f020057;
+        public static final int lefticon_update=0x7f020058;
+        public static final int line_0=0x7f020059;
+        public static final int line_1=0x7f02005a;
+        public static final int list_btn_add=0x7f02005b;
+        public static final int list_btn_add_big=0x7f02005c;
+        public static final int list_btn_add_small=0x7f02005d;
+        public static final int list_btn_reduce=0x7f02005e;
+        public static final int list_btn_reduce_big=0x7f02005f;
+        public static final int list_btn_reduce_small=0x7f020060;
+        public static final int listview_load_failed=0x7f020061;
+        public static final int listview_load_succeed=0x7f020062;
+        public static final int listview_ptor_loading=0x7f020063;
+        public static final int listview_ptor_refreshing=0x7f020064;
+        public static final int listview_pull_icon_big=0x7f020065;
+        public static final int listview_pullup_icon_big=0x7f020066;
+        public static final int listview_refresh_failed=0x7f020067;
+        public static final int listview_refresh_succeed=0x7f020068;
+        public static final int location=0x7f020069;
+        public static final int login_edit_normal=0x7f02006a;
+        public static final int logo_other=0x7f02006b;
+        public static final int logo_qq=0x7f02006c;
+        public static final int logo_qzone=0x7f02006d;
+        public static final int logo_shortmessage=0x7f02006e;
+        public static final int logo_sinaweibo=0x7f02006f;
+        public static final int logo_tencentweibo=0x7f020070;
+        public static final int logo_wechat=0x7f020071;
+        public static final int logo_wechatmoments=0x7f020072;
+        public static final int lsst=0x7f020073;
+        public static final int mall_tab_linear_background=0x7f020074;
+        public static final int menu_checkbox_item=0x7f020075;
+        public static final int mima_ico=0x7f020076;
+        public static final int my=0x7f020077;
+        public static final int ncmc=0x7f020078;
+        public static final int nhyj=0x7f020079;
+        public static final int progress_loading=0x7f02007a;
+        public static final int right_arrow=0x7f02007b;
+        public static final int rmhd=0x7f02007c;
+        public static final int search=0x7f02007d;
+        public static final int share=0x7f02007e;
+        public static final int tab_bar_bg=0x7f02007f;
+        public static final int title_bar=0x7f020080;
+        public static final int title_bg5=0x7f020081;
+        public static final int title_header_bg=0x7f020082;
+        public static final int tzzc=0x7f020083;
+        public static final int v502_icon_login_qq=0x7f020084;
+        public static final int v502_icon_login_weibo=0x7f020085;
+        public static final int v502_icon_login_weixin=0x7f020086;
+        public static final int views=0x7f020087;
+        public static final int voice_rcd_btn_nor=0x7f020088;
+        public static final int voice_rcd_btn_pressed=0x7f020089;
+        public static final int wode_header_bg=0x7f02008a;
+        public static final int wode_ico=0x7f02008b;
+        public static final int wode_login_bg=0x7f02008c;
+        public static final int wode_normal=0x7f02008d;
+        public static final int wode_pressed=0x7f02008e;
+        public static final int wode_set=0x7f02008f;
+        public static final int wode_tx=0x7f020090;
+        public static final int wodo_ico1=0x7f020091;
+        public static final int wodo_ico2=0x7f020092;
+        public static final int wodo_ico3=0x7f020093;
+        public static final int xcnf=0x7f020094;
+        public static final int xiangcun_back=0x7f020095;
+        public static final int xiangcun_bg2=0x7f020096;
+        public static final int xiangcun_cat_bg=0x7f020097;
+        public static final int xiangcun_cate=0x7f020098;
+        public static final int xiangcun_guanggao_bg=0x7f020099;
+        public static final int xiangcun_hostel=0x7f02009a;
+        public static final int xiangcun_index=0x7f02009b;
+        public static final int xiangcun_message=0x7f02009c;
+        public static final int xiangcun_message2=0x7f02009d;
+        public static final int xiangcun_message3=0x7f02009e;
+        public static final int xiangcun_normal=0x7f02009f;
+        public static final int xiangcun_pressed=0x7f0200a0;
+        public static final int xiangcun_search=0x7f0200a1;
+        public static final int xiangcun_speciality=0x7f0200a2;
+        public static final int xiangcun_stretch=0x7f0200a3;
+        public static final int yzc_jishi=0x7f0200a4;
+        public static final int yzc_wode=0x7f0200a5;
+        public static final int yzc_xiangcun=0x7f0200a6;
+        public static final int zhanghao_ico=0x7f0200a7;
     }
     public static final class id {
-        public static final int ImageView01=0x7f08001f;
-        public static final int TextView01=0x7f080021;
-        public static final int TextView02=0x7f080020;
-        public static final int TextView03=0x7f080023;
-        public static final int TextView04=0x7f080022;
-        public static final int _yl=0x7f08007a;
-        public static final int bt_log=0x7f08004c;
-        public static final int bt_reg=0x7f080050;
-        public static final int btn_goshop=0x7f080043;
-        public static final int details_camera=0x7f08006a;
-        public static final int details_location=0x7f08006b;
-        public static final int details_picture=0x7f080069;
-        public static final int financing_out_tab_balance=0x7f08002a;
-        public static final int financing_out_tab_balance_layout=0x7f080029;
-        public static final int financing_out_tab_bank=0x7f080028;
-        public static final int financing_out_tab_bank_layout=0x7f080027;
-        public static final int financing_out_tab_line=0x7f08001d;
-        public static final int financing_out_tab_line1=0x7f080045;
-        public static final int financing_out_tab_line2=0x7f08004b;
-        public static final int financing_out_tab_line3=0x7f080048;
-        public static final int financing_out_tab_line4=0x7f08004f;
-        public static final int fragment01linear=0x7f08007f;
-        public static final int fragment_main_scrollview=0x7f080060;
+        public static final int _back=0x7f08001b;
+        public static final int _bj=0x7f08001a;
+        public static final int _click=0x7f08006d;
+        public static final int _content=0x7f08003a;
+        public static final int _description=0x7f080019;
+        public static final int _dingwei=0x7f0800b7;
+        public static final int _distance=0x7f080038;
+        public static final int _fankui=0x7f08008a;
+        public static final int _filter=0x7f080044;
+        public static final int _findpwd=0x7f0800a1;
+        public static final int _guangyu=0x7f08008c;
+        public static final int _help=0x7f080088;
+        public static final int _jishi=0x7f0800a6;
+        public static final int _login=0x7f08008f;
+        public static final int _price=0x7f080052;
+        public static final int _register=0x7f0800a2;
+        public static final int _search=0x7f080045;
+        public static final int _share=0x7f08001c;
+        public static final int _stock=0x7f08006c;
+        public static final int _title=0x7f080036;
+        public static final int _wdsc=0x7f080086;
+        public static final int _wdxx=0x7f080083;
+        public static final int _wtjdxc=0x7f080084;
+        public static final int _xiangcun=0x7f0800a5;
+        public static final int _yl=0x7f08003f;
+        public static final int bt_log=0x7f08009e;
+        public static final int bt_reg=0x7f0800a3;
+        public static final int btn_del_history=0x7f080073;
+        public static final int btn_goshop=0x7f0800a4;
+        public static final int btn_search=0x7f080074;
+        public static final int btn_verifycode=0x7f08009c;
+        public static final int button1=0x7f08006e;
+        public static final int button2=0x7f08006f;
+        public static final int chat_from_content=0x7f080094;
+        public static final int chat_from_createDate=0x7f080091;
+        public static final int chat_from_icon=0x7f080092;
+        public static final int chat_from_name=0x7f080093;
+        public static final int chat_send_content=0x7f080099;
+        public static final int chat_send_createDate=0x7f080095;
+        public static final int chat_send_icon=0x7f080097;
+        public static final int chat_send_name=0x7f080098;
+        public static final int editText1=0x7f080070;
+        public static final int editText2=0x7f080071;
+        public static final int et_content=0x7f080075;
+        public static final int fragment01linear=0x7f08004b;
         public static final int frame_bottemView=0x7f08000a;
         public static final int frame_layout=0x7f080009;
-        public static final int getyzm=0x7f08004e;
-        public static final int imageView1=0x7f08001a;
+        public static final int head_view=0x7f08007c;
+        public static final int header=0x7f08006a;
+        public static final int id_chat_listView=0x7f0800b4;
+        public static final int id_chat_msg=0x7f0800b3;
+        public static final int id_chat_send=0x7f0800b2;
+        public static final int imageView1=0x7f08001f;
         /**  ImageLoader中， 
          */
         public static final int image_container=0x7f080007;
@@ -1663,176 +1869,243 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int image_container_tag=0x7f080005;
         public static final int image_url_tag=0x7f080006;
-        public static final int img_daiyang=0x7f08003d;
-        public static final int img_daizhong=0x7f08003a;
-        public static final int img_dingdan=0x7f080034;
-        public static final int img_fankui=0x7f080057;
-        public static final int img_guangyu=0x7f080055;
-        public static final int img_help=0x7f080053;
-        public static final int img_huodong=0x7f080040;
+        public static final int img_add=0x7f080031;
+        public static final int img_del_text=0x7f080076;
+        public static final int img_dy=0x7f08005d;
+        public static final int img_dz=0x7f08005b;
+        public static final int img_fankui=0x7f08008b;
+        public static final int img_guangyu=0x7f08008d;
+        public static final int img_hd=0x7f080061;
+        public static final int img_help=0x7f080089;
         public static final int img_jishi=0x7f08000f;
-        public static final int img_mima=0x7f080049;
-        public static final int img_shoucang=0x7f080037;
-        public static final int img_update=0x7f080059;
+        public static final int img_kd=0x7f080063;
+        public static final int img_login=0x7f080090;
+        public static final int img_meishi=0x7f080065;
+        public static final int img_mima=0x7f0800a0;
+        public static final int img_minsu=0x7f080069;
+        public static final int img_minus=0x7f080032;
+        public static final int img_rc=0x7f08005f;
+        public static final int img_techan=0x7f080067;
+        public static final int img_wdsc=0x7f080087;
         public static final int img_wode=0x7f080012;
+        public static final int img_wtjdxc=0x7f080085;
         public static final int img_xiangcun=0x7f08000c;
-        public static final int img_zhanghao=0x7f080046;
-        public static final int item_cat=0x7f080081;
-        public static final int item_cat_image=0x7f080080;
-        public static final int item_gview=0x7f080084;
-        public static final int item_listview=0x7f080065;
-        public static final int item_listview_image=0x7f080083;
-        public static final int jishi_content=0x7f080019;
+        public static final int img_zhanghao=0x7f08009f;
+        public static final int include1=0x7f080049;
+        public static final int item_cat=0x7f08004d;
+        public static final int item_cat_image=0x7f08004c;
+        public static final int item_listview=0x7f080030;
+        public static final int item_listview_image=0x7f080037;
         public static final int jishi_filter=0x7f080016;
         public static final int jishi_search=0x7f080015;
-        public static final int listView1=0x7f08001e;
-        public static final int ll_indicator=0x7f080063;
+        public static final int linearLayout1=0x7f08004f;
+        public static final int listView1=0x7f08002c;
+        public static final int listview=0x7f080035;
+        public static final int ll=0x7f0800b6;
+        public static final int ll_indicator=0x7f080058;
         public static final int ll_jishi=0x7f08000e;
-        public static final int ll_jishi_fenlei3=0x7f08002b;
         public static final int ll_wode=0x7f080011;
         public static final int ll_xiangcun=0x7f08000b;
+        public static final int load_progress=0x7f080082;
+        public static final int loading_icon=0x7f080079;
+        public static final int loadmore_view=0x7f080077;
+        public static final int loadstate_iv=0x7f08007b;
+        public static final int loadstate_tv=0x7f08007a;
+        public static final int lsst_back=0x7f0800b8;
+        public static final int lv_ncmc=0x7f0800ba;
+        public static final int ly_chat_bottom=0x7f0800b1;
+        public static final int ly_chat_icon=0x7f080096;
+        public static final int ly_chat_title=0x7f0800b0;
+        public static final int ly_v2=0x7f080055;
         public static final int menu_home=0x7f080001;
         public static final int menu_new=0x7f080002;
         public static final int menu_overflow_btn=0x7f080000;
         public static final int menu_personal=0x7f080004;
         public static final int menu_yzcm=0x7f080003;
-        public static final int one_item_address=0x7f080079;
-        public static final int one_item_content=0x7f08007b;
-        public static final int one_item_image=0x7f080077;
-        public static final int one_item_price=0x7f08007c;
-        public static final int one_item_sell=0x7f08007d;
-        public static final int one_item_title=0x7f080078;
-        public static final int one_listview=0x7f080076;
+        public static final int ncmc_back=0x7f0800b9;
+        public static final int one_item_address=0x7f08003e;
+        public static final int one_item_content=0x7f080040;
+        public static final int one_item_image=0x7f08003c;
+        public static final int one_item_price=0x7f080041;
+        public static final int one_item_purchase_price=0x7f080048;
+        public static final int one_item_sell=0x7f080042;
+        public static final int one_item_title=0x7f08003d;
+        public static final int one_listview=0x7f08003b;
         public static final int pagertab=0x7f080017;
-        public static final int pwd=0x7f08004a;
+        public static final int progress_wheel=0x7f080081;
+        public static final int pullToRefreshLayout=0x7f08002f;
+        public static final int pull_icon=0x7f08007d;
+        public static final int pullup_icon=0x7f080078;
+        public static final int pwd=0x7f08009d;
+        public static final int r_daiyang=0x7f08005c;
+        public static final int r_daizhong=0x7f08005a;
+        public static final int r_hudong=0x7f080060;
+        public static final int r_huodong=0x7f080062;
+        public static final int r_meishi=0x7f080064;
+        public static final int r_minsu=0x7f080068;
+        public static final int r_nongchou=0x7f08005e;
+        public static final int r_techan=0x7f080066;
+        public static final int refreshing_icon=0x7f08007e;
+        public static final int relativeLayout1=0x7f080043;
         public static final int report=0x7f080008;
-        public static final int rl=0x7f080061;
-        public static final int rl1=0x7f08005d;
-        public static final int swiperefresh_view=0x7f08005f;
-        public static final int textView1=0x7f08001b;
-        public static final int textView2=0x7f08001c;
-        public static final int textView3=0x7f080024;
-        public static final int textView4=0x7f080025;
-        public static final int textView5=0x7f080026;
+        public static final int rl=0x7f080056;
+        public static final int rl_v1=0x7f08002d;
+        public static final int rl_v2=0x7f080054;
+        public static final int rmhd_back=0x7f0800bb;
+        public static final int selltitle=0x7f08004a;
+        public static final int state_iv=0x7f080080;
+        public static final int state_tv=0x7f08007f;
+        public static final int textView1=0x7f080039;
+        public static final int textView2=0x7f0800ae;
+        public static final int textView6=0x7f08006b;
+        public static final int textView7=0x7f080072;
+        public static final int tv_address=0x7f080020;
+        public static final int tv_catname=0x7f08002e;
+        public static final int tv_description=0x7f080051;
+        public static final int tv_english=0x7f080050;
+        public static final int tv_huodong=0x7f080022;
         public static final int tv_jishi=0x7f080010;
-        public static final int tv_jishi_fenlei3=0x7f08002c;
+        public static final int tv_meishi=0x7f080024;
+        public static final int tv_mingsu=0x7f080028;
+        public static final int tv_name=0x7f08001e;
+        public static final int tv_number=0x7f080033;
+        public static final int tv_rmb=0x7f080047;
+        public static final int tv_sell_out=0x7f080034;
+        public static final int tv_techan=0x7f080026;
+        public static final int tv_title=0x7f080053;
         public static final int tv_wode=0x7f080013;
         public static final int tv_xiangcun=0x7f08000d;
-        public static final int two_item_gview=0x7f08007e;
-        public static final int username=0x7f080047;
-        public static final int v1=0x7f080064;
+        public static final int tv_zhixun=0x7f08002a;
+        public static final int two_item_gview=0x7f080046;
+        public static final int tzzc_back=0x7f0800bc;
+        public static final int username=0x7f08009a;
+        public static final int v1=0x7f080059;
+        public static final int verifycode=0x7f08009b;
         public static final int viewPager=0x7f080018;
-        public static final int view_cunli=0x7f08006c;
-        public static final int view_daohang=0x7f08006d;
-        public static final int view_hudong=0x7f08006f;
-        public static final int view_huodong=0x7f08006e;
-        public static final int view_meijing=0x7f080070;
-        public static final int view_meishi=0x7f080071;
-        public static final int view_mingsu=0x7f080073;
-        public static final int view_next1=0x7f080035;
-        public static final int view_next2=0x7f080038;
-        public static final int view_next3=0x7f08003b;
-        public static final int view_next4=0x7f08003e;
-        public static final int view_next5=0x7f080041;
-        public static final int view_techan=0x7f080072;
-        public static final int viewpager=0x7f080062;
-        public static final int wode_daiyang=0x7f08003c;
-        public static final int wode_daizhong=0x7f080039;
-        public static final int wode_dingdan=0x7f080033;
-        public static final int wode_fankui=0x7f080056;
-        public static final int wode_guangyu=0x7f080054;
-        public static final int wode_help=0x7f080052;
-        public static final int wode_huodong=0x7f08003f;
-        public static final int wode_ico=0x7f08002d;
-        public static final int wode_jifeng=0x7f080031;
-        public static final int wode_login=0x7f08002f;
-        public static final int wode_no=0x7f080042;
-        public static final int wode_register=0x7f080030;
-        public static final int wode_set=0x7f08002e;
-        public static final int wode_shopcart=0x7f080032;
-        public static final int wode_shoucang=0x7f080036;
-        public static final int wode_update=0x7f080058;
-        public static final int wodeset_back=0x7f080051;
-        public static final int wodesetfankui_back=0x7f08005a;
-        public static final int wodesetguangyu_back=0x7f08005b;
-        public static final int wodesethelp_back=0x7f08005c;
-        public static final int xiangcun_back=0x7f080066;
-        public static final int xiangcun_collection=0x7f080068;
+        public static final int view_huodong=0x7f080021;
+        public static final int view_meishi=0x7f080023;
+        public static final int view_mingsu=0x7f080027;
+        public static final int view_next1=0x7f0800a9;
+        public static final int view_next2=0x7f0800ab;
+        public static final int view_next3=0x7f0800ad;
+        public static final int view_techan=0x7f080025;
+        public static final int view_zhixun=0x7f080029;
+        public static final int viewpager=0x7f080057;
+        public static final int wode_fankui=0x7f0800ac;
+        public static final int wode_guangyu=0x7f0800aa;
+        public static final int wode_help=0x7f0800a8;
+        public static final int wode_no=0x7f0800af;
+        public static final int wode_update=0x7f08008e;
+        public static final int wodeset_back=0x7f0800a7;
+        public static final int wodesetguangyu_back=0x7f0800b5;
+        public static final int xiangcun_collection=0x7f08001d;
         public static final int xiangcun_dingwei=0x7f080014;
-        public static final int xiangcun_item_ry=0x7f080082;
-        public static final int xiangcun_listView=0x7f080074;
-        public static final int xiangcun_search=0x7f08005e;
-        public static final int xiangcun_share=0x7f080067;
-        public static final int xiangcundingwei_back=0x7f080044;
-        public static final int xiangcunsearch_back=0x7f080075;
-        public static final int yzm=0x7f08004d;
+        public static final int xiangcun_item_ry=0x7f08004e;
+        public static final int xiangcundingwei_back=0x7f08002b;
     }
     public static final class layout {
         public static final int activity_frame=0x7f030000;
         public static final int activity_jishi=0x7f030001;
-        public static final int activity_jishi_fenlei=0x7f030002;
-        public static final int activity_jishi_fenlei1_detail=0x7f030003;
-        public static final int activity_jishi_fenlei1_list=0x7f030004;
-        public static final int activity_jishi_fenlei2_detail=0x7f030005;
-        public static final int activity_jishi_fenlei2_list=0x7f030006;
-        public static final int activity_jishi_fenlei3_detail=0x7f030007;
-        public static final int activity_jishi_fenlei3_list=0x7f030008;
-        public static final int activity_jishi_fenlei_tab=0x7f030009;
-        public static final int activity_wode=0x7f03000a;
-        public static final int activity_wode_shopcart_null=0x7f03000b;
-        public static final int activity_wodelogin=0x7f03000c;
-        public static final int activity_woderegister=0x7f03000d;
-        public static final int activity_wodeset=0x7f03000e;
-        public static final int activity_wodesetfankui=0x7f03000f;
-        public static final int activity_wodesetguangyu=0x7f030010;
-        public static final int activity_wodesethelp=0x7f030011;
-        public static final int activity_xiangcun=0x7f030012;
-        public static final int activity_xiangcun_fenlei=0x7f030013;
-        public static final int activity_xiangcun_list=0x7f030014;
-        public static final int activity_xiangcundetails=0x7f030015;
-        public static final int activity_xiangcundingwei=0x7f030016;
-        public static final int activity_xiangcunlist=0x7f030017;
-        public static final int activity_xiangcunsearch=0x7f030018;
-        public static final int fragment_details_cunli=0x7f030019;
-        public static final int fragment_details_daohang=0x7f03001a;
-        public static final int fragment_details_hudong=0x7f03001b;
-        public static final int fragment_details_huodong=0x7f03001c;
-        public static final int fragment_details_meijing=0x7f03001d;
-        public static final int fragment_details_meishi=0x7f03001e;
-        public static final int fragment_details_minsu=0x7f03001f;
-        public static final int fragment_details_techan=0x7f030020;
-        public static final int fragment_jshi_one=0x7f030021;
-        public static final int fragment_jshi_one_item=0x7f030022;
-        public static final int fragment_jshi_three=0x7f030023;
-        public static final int fragment_jshi_three_item=0x7f030024;
-        public static final int fragment_jshi_two=0x7f030025;
-        public static final int fragment_jshi_two_item=0x7f030026;
-        public static final int fragment_my01=0x7f030027;
-        public static final int fragment_xiangcun_gridview_item=0x7f030028;
-        public static final int fragment_xiangcun_listview_item=0x7f030029;
-        public static final int fragment_xiangcun_listview_item_addheaderview=0x7f03002a;
+        public static final int activity_xiangcun_fenlei=0x7f030002;
+        public static final int activity_xiangcundetails=0x7f030003;
+        public static final int activity_xiangcundingwei=0x7f030004;
+        public static final int activity_xiangcunlist=0x7f030005;
+        public static final int btn_add_common36=0x7f030006;
+        public static final int common_listview=0x7f030007;
+        public static final int dingwei_listview=0x7f030008;
+        public static final int dingwei_listview_item=0x7f030009;
+        public static final int fragment_details_cunli=0x7f03000a;
+        public static final int fragment_details_daohang=0x7f03000b;
+        public static final int fragment_details_hudong=0x7f03000c;
+        public static final int fragment_details_huodong=0x7f03000d;
+        public static final int fragment_details_meijing=0x7f03000e;
+        public static final int fragment_details_meishi=0x7f03000f;
+        public static final int fragment_details_minsu=0x7f030010;
+        public static final int fragment_details_resource=0x7f030011;
+        public static final int fragment_details_techan=0x7f030012;
+        public static final int fragment_details_zhixun=0x7f030013;
+        public static final int fragment_jshi_one=0x7f030014;
+        public static final int fragment_jshi_one_item=0x7f030015;
+        public static final int fragment_jshi_three=0x7f030016;
+        public static final int fragment_jshi_three_item=0x7f030017;
+        public static final int fragment_jshi_two=0x7f030018;
+        public static final int fragment_jshi_two_item=0x7f030019;
+        public static final int fragment_my01=0x7f03001a;
+        public static final int fragment_xiangcun_gridview_item=0x7f03001b;
+        public static final int fragment_xiangcun_listview_item=0x7f03001c;
+        public static final int fragment_xiangcun_listview_item_addheaderview=0x7f03001d;
+        public static final int fragment_xiangcun_listview_item_header=0x7f03001e;
+        public static final int jishi_filter_activity=0x7f03001f;
+        public static final int jishi_search_activity=0x7f030020;
+        public static final int listview_load_more=0x7f030021;
+        public static final int listview_refresh_head=0x7f030022;
+        public static final int progress_dialog_layout=0x7f030023;
+        public static final int search_activity=0x7f030024;
+        public static final int swiperefreshlayout_footer=0x7f030025;
+        public static final int wode_activity=0x7f030026;
+        public static final int wode_fankui_from_msg=0x7f030027;
+        public static final int wode_fankui_send_msg=0x7f030028;
+        public static final int wode_find_pwd_activity=0x7f030029;
+        public static final int wode_login_activity=0x7f03002a;
+        public static final int wode_login_activity2=0x7f03002b;
+        public static final int wode_register_activity=0x7f03002c;
+        public static final int wode_shopcart_null_activity=0x7f03002d;
+        public static final int wode_wdsc_activity=0x7f03002e;
+        public static final int wode_wdxx_activity=0x7f03002f;
+        public static final int wode_wtjdxc_activity=0x7f030030;
+        public static final int wode_xtxx_activity=0x7f030031;
+        public static final int wode_xtxx_fankui_activity=0x7f030032;
+        public static final int wode_xtxx_guangyu_activity=0x7f030033;
+        public static final int wode_xtxx_help_activity=0x7f030034;
+        public static final int xiangcun_activity=0x7f030035;
+        public static final int xiangcun_kuozhan_activity=0x7f030036;
+        public static final int xiangcun_kuozhan_item=0x7f030037;
+        public static final int xiangcun_kuozhan_lsst_activity=0x7f030038;
+        public static final int xiangcun_kuozhan_ncmc_activity=0x7f030039;
+        public static final int xiangcun_kuozhan_rmhd_activity=0x7f03003a;
+        public static final int xiangcun_kuozhan_tzzc_activity=0x7f03003b;
+        public static final int xiangcun_search_activity=0x7f03003c;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
     }
     public static final class string {
-        public static final int app_name=0x7f07007c;
-        public static final int app_run_code_error=0x7f070083;
-        public static final int city_name=0x7f070090;
+        public static final int OAUTH_AccessToken_ACCESS=0x7f0700bd;
+        public static final int OAUTH_AccessToken_ERROR=0x7f0700be;
+        public static final int OAUTH_AccessToken_SXPIRED=0x7f0700bf;
+        /**  sina share message 
+         */
+        public static final int OAUTH_ERROR=0x7f0700ba;
+        public static final int OAUTH_RequestToken_ACCESS=0x7f0700bb;
+        public static final int OAUTH_RequestToken_ERROR=0x7f0700bc;
+        public static final int Weibo_Message_LONG=0x7f0700c1;
+        public static final int Weibo_Message_NULL=0x7f0700c0;
+        public static final int Weibo_Share_Error=0x7f0700c3;
+        public static final int Weibo_Share_Repeat=0x7f0700c4;
+        public static final int Weibo_Share_Success=0x7f0700c2;
+        public static final int app_error=0x7f070098;
+        public static final int app_error_message=0x7f070099;
+        public static final int app_menu_surelogout=0x7f070095;
+        public static final int app_name=0x7f07008c;
+        public static final int app_run_code_error=0x7f070093;
+        public static final int cancle=0x7f070097;
+        public static final int choose_image=0x7f0700a6;
+        public static final int city_name=0x7f0700cf;
+        public static final int clearwords=0x7f0700ab;
         public static final int common_back=0x7f07000d;
-        public static final int common_btn_find_pwd=0x7f07009d;
-        public static final int common_btn_register=0x7f07009e;
-        public static final int common_btn_verifycode=0x7f07009f;
+        public static final int common_btn_find_pwd=0x7f0700dc;
+        public static final int common_btn_register=0x7f0700dd;
+        public static final int common_btn_verifycode=0x7f0700de;
         public static final int common_cancel=0x7f070003;
         public static final int common_complete=0x7f070006;
         public static final int common_delete=0x7f070007;
         public static final int common_edit=0x7f070004;
         public static final int common_ensure=0x7f070002;
-        public static final int common_hint_confirm_pwd=0x7f07009c;
-        public static final int common_hint_msgcode=0x7f07009a;
-        public static final int common_hint_phone=0x7f070098;
-        public static final int common_hint_pwd=0x7f07009b;
-        public static final int common_hint_verifycode=0x7f070099;
+        public static final int common_hint_confirm_pwd=0x7f0700db;
+        public static final int common_hint_msgcode=0x7f0700d9;
+        public static final int common_hint_phone=0x7f0700d7;
+        public static final int common_hint_pwd=0x7f0700da;
+        public static final int common_hint_verifycode=0x7f0700d8;
         public static final int common_login=0x7f070005;
         /**  公共模块 
          */
@@ -1843,6 +2116,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int common_tab_nearby=0x7f07000b;
         public static final int common_tab_thing=0x7f070009;
         public static final int common_use=0x7f070001;
+        public static final int delete_blog=0x7f0700a9;
+        public static final int delete_image=0x7f0700a7;
+        public static final int delete_tweet=0x7f0700a8;
         public static final int financing_bank_add_cardno=0x7f07005a;
         public static final int financing_bank_add_cardno_hint=0x7f07005b;
         public static final int financing_bank_add_hint=0x7f070059;
@@ -1887,24 +2163,49 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int financing_week_income=0x7f070053;
         public static final int financing_week_yield=0x7f070055;
         public static final int financing_yesterday_income=0x7f070051;
-        public static final int finish=0x7f070087;
-        public static final int hello_world=0x7f070085;
-        public static final int http_exception_error=0x7f070081;
-        public static final int http_status_code_error=0x7f070080;
-        public static final int io_exception_error=0x7f07007f;
+        public static final int finish=0x7f0700c6;
+        public static final int http_exception_error=0x7f070091;
+        public static final int http_status_code_error=0x7f070090;
+        public static final int io_exception_error=0x7f07008f;
         public static final int jishi_fenlei1=0x7f070068;
         public static final int jishi_fenlei2=0x7f070069;
         public static final int jishi_fenlei3=0x7f07006a;
+        public static final int listview_load_fail=0x7f07008b;
+        public static final int listview_load_succeed=0x7f07008a;
+        public static final int listview_loading=0x7f070089;
+        public static final int listview_pull_to_refresh=0x7f070082;
+        public static final int listview_pullup_to_load=0x7f070087;
+        public static final int listview_refresh_fail=0x7f070086;
+        public static final int listview_refresh_succeed=0x7f070085;
+        public static final int listview_refreshing=0x7f070084;
+        public static final int listview_release_to_load=0x7f070088;
+        public static final int listview_release_to_refresh=0x7f070083;
+        public static final int load_empty=0x7f07009e;
+        public static final int load_error=0x7f07009f;
+        public static final int load_full=0x7f07009d;
+        public static final int load_ing=0x7f07009c;
+        public static final int load_more=0x7f07009b;
         /**  加载失败页面 
          */
-        public static final int loading_failed_msg=0x7f070091;
-        public static final int loading_failed_refresh=0x7f070092;
-        public static final int menu_cart=0x7f07008a;
-        public static final int menu_search=0x7f070089;
+        public static final int loading_failed_msg=0x7f0700d0;
+        public static final int loading_failed_refresh=0x7f0700d1;
+        public static final int menu_cart=0x7f0700c9;
+        public static final int menu_search=0x7f0700c8;
         /**  主菜单 
          */
-        public static final int menu_shop=0x7f070088;
-        public static final int menu_user=0x7f07008b;
+        public static final int menu_shop=0x7f0700c7;
+        public static final int menu_user=0x7f0700ca;
+        public static final int msg_load_image_fail=0x7f0700b4;
+        public static final int msg_load_is_null=0x7f0700ac;
+        public static final int msg_load_userface_fail=0x7f0700b3;
+        public static final int msg_login_email_error=0x7f0700ad;
+        public static final int msg_login_email_null=0x7f0700ae;
+        public static final int msg_login_error=0x7f0700b2;
+        public static final int msg_login_fail=0x7f0700b1;
+        public static final int msg_login_pwd_null=0x7f0700af;
+        public static final int msg_login_success=0x7f0700b0;
+        public static final int msg_noaccess_delete=0x7f0700b6;
+        public static final int msg_read_detail_fail=0x7f0700b5;
         /**  example: 
 
     <string-array name="planets_array">
@@ -1915,10 +2216,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     </string-array>
     
          */
-        public static final int network_not_connected=0x7f07007d;
+        public static final int network_not_connected=0x7f07008d;
+        public static final int new_data_toast_message=0x7f0700a0;
+        public static final int new_data_toast_none=0x7f0700a1;
         /**  主菜单 
          */
-        public static final int next=0x7f070086;
+        public static final int next=0x7f0700c5;
+        public static final int publishing=0x7f0700a5;
+        public static final int republish_tweet=0x7f0700aa;
+        public static final int select=0x7f0700a2;
         public static final int set_about=0x7f07007a;
         public static final int set_check_update=0x7f070079;
         public static final int set_common=0x7f070077;
@@ -1927,6 +2233,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  设置模块 
          */
         public static final int set_title=0x7f070076;
+        public static final int share=0x7f0700a3;
+        public static final int sharing=0x7f0700a4;
         /**  商品列表 
          */
         public static final int shop_goods_composite=0x7f07000e;
@@ -1957,23 +2265,30 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int shop_goods_main_seed=0x7f070021;
         public static final int shop_goods_sales=0x7f07000f;
         public static final int shop_goods_shopprice=0x7f070010;
-        public static final int socket_exception_error=0x7f070082;
-        public static final int title_activity_set=0x7f070084;
-        public static final int title_cart=0x7f07008d;
-        public static final int title_findpwd=0x7f070096;
+        /**  LoginSina 
+         */
+        public static final int sinalogin_check_account=0x7f0700b7;
+        public static final int sinalogin_check_pass=0x7f0700b8;
+        public static final int sinalogin_check_server=0x7f0700b9;
+        public static final int socket_exception_error=0x7f070092;
+        public static final int submit_report=0x7f07009a;
+        public static final int sure=0x7f070096;
+        public static final int title_activity_set=0x7f070094;
+        public static final int title_cart=0x7f0700cc;
+        public static final int title_findpwd=0x7f0700d5;
         /**  common 
          */
-        public static final int title_login=0x7f070095;
+        public static final int title_login=0x7f0700d4;
         /**  顶部标题 
          */
-        public static final int title_main=0x7f07008c;
-        public static final int title_register=0x7f070097;
-        public static final int title_search=0x7f07008e;
-        public static final int title_user=0x7f07008f;
+        public static final int title_main=0x7f0700cb;
+        public static final int title_register=0x7f0700d6;
+        public static final int title_search=0x7f0700cd;
+        public static final int title_user=0x7f0700ce;
         /**  个人中心 
          */
-        public static final int user_btn_login=0x7f070093;
-        public static final int user_btn_regster=0x7f070094;
+        public static final int user_btn_login=0x7f0700d2;
+        public static final int user_btn_regster=0x7f0700d3;
         public static final int user_feedback_commit=0x7f070037;
         public static final int user_feedback_content=0x7f070036;
         /**  用户反馈 
@@ -2021,7 +2336,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int user_wallet_balance_pay=0x7f070033;
         public static final int user_wallet_balance_time=0x7f070031;
         public static final int user_wallet_balance_use=0x7f070032;
-        public static final int xml_parser_failed=0x7f07007e;
+        public static final int xlistview_footer_hint_normal=0x7f070080;
+        public static final int xlistview_footer_hint_ready=0x7f070081;
+        public static final int xlistview_header_hint_loading=0x7f07007e;
+        public static final int xlistview_header_hint_normal=0x7f07007c;
+        public static final int xlistview_header_hint_ready=0x7f07007d;
+        public static final int xlistview_header_last_time=0x7f07007f;
+        public static final int xml_parser_failed=0x7f07008e;
     }
     public static final class style {
         /** 
@@ -2052,7 +2373,188 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f090001;
+        /**  全屏菊花样式 
+         */
+        public static final int Dialog=0x7f090005;
+        /**  全局加载进度条 
+         */
+        public static final int ProgressDialog=0x7f090004;
+        /**  字体样式 start 
+         */
+        public static final int chat_date_style=0x7f090006;
         public static final int mystyle=0x7f090003;
         public static final int shareDialogTheme=0x7f090002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ProgressWheel.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ProgressWheel_barColor com.alec.yzc:barColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_barSpinCycleTime com.alec.yzc:barSpinCycleTime}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_barWidth com.alec.yzc:barWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_circleRadius com.alec.yzc:circleRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_fillRadius com.alec.yzc:fillRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_progressIndeterminate com.alec.yzc:progressIndeterminate}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_rimColor com.alec.yzc:rimColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_rimWidth com.alec.yzc:rimWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_spinSpeed com.alec.yzc:spinSpeed}</code></td><td></td></tr>
+           </table>
+           @see #ProgressWheel_barColor
+           @see #ProgressWheel_barSpinCycleTime
+           @see #ProgressWheel_barWidth
+           @see #ProgressWheel_circleRadius
+           @see #ProgressWheel_fillRadius
+           @see #ProgressWheel_progressIndeterminate
+           @see #ProgressWheel_rimColor
+           @see #ProgressWheel_rimWidth
+           @see #ProgressWheel_spinSpeed
+         */
+        public static final int[] ProgressWheel = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.alec.yzc.R.attr#barColor}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.alec.yzc:barColor
+        */
+        public static final int ProgressWheel_barColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.alec.yzc.R.attr#barSpinCycleTime}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.alec.yzc:barSpinCycleTime
+        */
+        public static final int ProgressWheel_barSpinCycleTime = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.alec.yzc.R.attr#barWidth}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.alec.yzc:barWidth
+        */
+        public static final int ProgressWheel_barWidth = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.alec.yzc.R.attr#circleRadius}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.alec.yzc:circleRadius
+        */
+        public static final int ProgressWheel_circleRadius = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.alec.yzc.R.attr#fillRadius}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.alec.yzc:fillRadius
+        */
+        public static final int ProgressWheel_fillRadius = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.alec.yzc.R.attr#progressIndeterminate}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.alec.yzc:progressIndeterminate
+        */
+        public static final int ProgressWheel_progressIndeterminate = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.alec.yzc.R.attr#rimColor}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.alec.yzc:rimColor
+        */
+        public static final int ProgressWheel_rimColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.alec.yzc.R.attr#rimWidth}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.alec.yzc:rimWidth
+        */
+        public static final int ProgressWheel_rimWidth = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.alec.yzc.R.attr#spinSpeed}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.alec.yzc:spinSpeed
+        */
+        public static final int ProgressWheel_spinSpeed = 4;
+        /** Attributes that can be used with a TimeTextView.
+         */
+        public static final int[] TimeTextView = {
+            
+        };
+    };
 }

@@ -28,7 +28,6 @@ public class ViewPagerAutoScrollHelper {
             @Override
             public void onPageSelected(int position) {
                 currentCount = 0;
-
             }
 
             @Override

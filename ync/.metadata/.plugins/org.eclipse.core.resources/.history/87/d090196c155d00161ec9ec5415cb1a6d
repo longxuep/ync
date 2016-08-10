@@ -1,0 +1,92 @@
+package com.example.test;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+
+public class MainActivity extends Activity {
+	private ListView lsitview_v1,lsitview_v2;
+	private ArrayList<Message> list;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        lsitview_v1=(ListView)findViewById(R.id.lsitview_v1);
+        lsitview_v2=(ListView)findViewById(R.id.lsitview_v2);
+        list = new ArrayList<Message>();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		for (int i = 0; i < 10; i++) {
+			Date curDate = new Date(System.currentTimeMillis());// 获取当前时间
+			Message m = new Message();
+			m.setTitle("课节" + i);
+			m.setTime(formatter.format(curDate));
+			list.add(m);
+		}
+        
+    }
+    class ListAdapter extends BaseAdapter {
+		ArrayList<Message> list;
+
+		public ListAdapter(ArrayList<Message> list) {
+			this.list = list;
+		}
+
+		@Override
+		public int getCount() {
+			return list.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return list.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			ViewHolder viewHolder = null;
+			if (convertView == null) {
+				convertView = LayoutInflater.from(parent.getContext()).inflate(
+						R.layout.activity_halloffame_listview_item, null);
+				viewHolder = new ViewHolder();
+				viewHolder.tv_name = (TextView) convertView
+						.findViewById(R.id.tv_name);
+				viewHolder.tv_time = (TextView) convertView
+						.findViewById(R.id.tv_time);
+				convertView.setTag(viewHolder);
+			} else {
+				viewHolder = (ViewHolder) convertView.getTag();
+			}
+			if (list.get(position) != null) {
+				viewHolder.tv_name
+						.setText(list.get(position).getTitle() != null ? list
+								.get(position).getTitle().toString() : "");
+				viewHolder.tv_time
+						.setText(list.get(position).getTime() != null ? list
+			}
+
+			return convertView;
+		}
+
+		public class ViewHolder {
+			private TextView tv_name, tv_time;
+			private ImageView imageView1;
+		}
+	}
+
+}

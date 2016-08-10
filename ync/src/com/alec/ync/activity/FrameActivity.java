@@ -6,6 +6,7 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,6 +22,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alec.ync.base.BaseActivity;
+import com.alec.ync.base.BaseContext;
 import com.alec.ync.frament.JishiFragment;
 import com.alec.ync.frament.WodeFragment;
 import com.alec.ync.frament.XiangcunFragment;
@@ -266,5 +269,9 @@ public class FrameActivity extends BaseActivity {
 			showToastMsgShort("·þÎñÆ÷Á´½Ó´íÎó");
 		}
 	};
+	@Override
+	protected Context getContext() {
+		return this;
+	}
 
 }

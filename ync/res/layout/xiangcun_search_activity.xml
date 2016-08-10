@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="491dp"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbar_height"
+        android:background="@color/theme_color"
+        android:paddingLeft="@dimen/d8"
+        android:paddingRight="@dimen/d8" >
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/topbar_search_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topbar_search_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/d8"
+            android:layout_marginRight="@dimen/d8"
+            android:layout_toLeftOf="@id/btn_search"
+            android:layout_toRightOf="@+id/_back"
+            android:focusable="true" 
+			android:focusableInTouchMode="true" 
+            android:background="@drawable/bg_topbar_search" >
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d8"
+                android:layout_marginRight="@dimen/d8"
+                android:background="@null"
+                android:hint="请输入乡村名称"
+                android:imeOptions="actionSearch"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_del_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/d8"
+                android:src="@drawable/icon_et_del" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:drawableLeft="@drawable/btn_back"
+            android:gravity="center_vertical"
+            android:text=" 返回"
+            android:textColor="@color/yzc_textcolor"
+            android:textSize="18sp" />
+
+    </RelativeLayout>    
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="451dp"
+        android:layout_below="@id/header" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <include layout="@layout/common_listview" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_del_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/d8"
+            android:background="@color/trans_gray"
+            android:text="清空搜索历史"
+            android:textSize="15sp" />
+    </FrameLayout>   
+    
+</LinearLayout>
+    
+</ScrollView>

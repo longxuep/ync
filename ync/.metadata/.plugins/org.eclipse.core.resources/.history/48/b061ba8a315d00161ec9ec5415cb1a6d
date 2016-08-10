@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="精通java"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="课程来源:计算机系"
+            android:textSize="20px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/image_v1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_v1"
+            android:text="教室：广西大学307"
+            android:textSize="20px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/image_v2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_v2"
+            android:text="讲师："
+            android:textSize="20px" />
+        <TextView
+            android:id="@+id/tv_left_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:drawableBottom="@drawable/dotted_lines"
+            android:text="已有43位同学"
+            android:textSize="20px"
+            android:textColor="#D45828" />
+        <View 
+             android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="-5dp"
+            android:layout_alignBottom="@+id/tv_left_v1"
+            android:layout_alignLeft="@+id/tv_left_v1"
+            android:layout_alignRight="@+id/tv_left_v1"
+            android:background="@drawable/dotted_lines"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/image_v3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_v3"
+            android:text="教室：广西大学307"
+            android:textSize="20px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/image_v4"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_v4"
+            android:text="教室：广西大学307"
+            android:textSize="20px" />
+    </RelativeLayout>
+
+</LinearLayout>

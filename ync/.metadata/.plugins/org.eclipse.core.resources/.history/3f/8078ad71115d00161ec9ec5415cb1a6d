@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 输入框的背景 -->
+    <solid android:color="@color/transparent" />
+    <corners 
+        android:topLeftRadius="@dimen/_5px"
+        android:topRightRadius="@dimen/_5px"
+        android:bottomLeftRadius="@dimen/_5px"
+        android:bottomRightRadius="@dimen/_5px"
+        />
+    <stroke android:width="@dimen/_2px" android:color="@color/public_colors"/>
+</shape>

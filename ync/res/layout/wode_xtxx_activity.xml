@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_bg"
+        android:orientation="vertical" >
+    
+    
+     <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_96px"
+            android:background="@drawable/header_bg" >
+
+        <TextView
+                android:id="@+id/wodeset_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/btn_back"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_20px"
+                android:text=" 返回"
+                android:textColor="@color/yzc_textcolor"
+                android:textSize="18sp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="设置"
+                android:textColor="@color/yzc_textcolor"
+                android:textSize="18sp" />   
+   </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/wode_help"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2px"
+            android:background="#ffffffff" >
+
+            <ImageView
+                android:id="@+id/view_next1"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="52px"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24px"
+                android:gravity="center"
+                android:text="使用帮助"
+                android:textSize="32px" />
+        </RelativeLayout>    
+    
+    <RelativeLayout
+            android:id="@+id/wode_guangyu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2px"
+            android:background="#ffffffff" >
+
+            <ImageView
+                android:id="@+id/view_next2"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="52px"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24px"
+                android:gravity="center"
+                android:text="关于我们"
+                android:textSize="32px" />
+        </RelativeLayout>   
+    
+    <RelativeLayout
+            android:id="@+id/wode_fankui"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2px"
+            android:background="#ffffffff" >
+
+            <ImageView
+                android:id="@+id/view_next3"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="52px"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24px"
+                android:gravity="center"
+                android:text="意见反馈"
+                android:textSize="32px" />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wode_update"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="2px"
+        android:background="#ffffffff" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24px"
+            android:gravity="center"
+            android:text="检查更新"
+            android:textSize="32px" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:text="已是最新版本" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+            android:id="@+id/wode_no"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2px"
+            android:background="#ffffffff" >
+
+        </RelativeLayout>     
+    
+</LinearLayout>
+    
+</ScrollView>

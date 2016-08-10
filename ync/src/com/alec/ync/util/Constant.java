@@ -43,21 +43,27 @@ public class Constant {
 	}
 	public static class Url{
 		//URL
-		public static final String Login=InterfaceURL.BASE_URL+"api/apiLogin.php";//登录
+		public static final String Login=InterfaceURL.BASE_URL+"api/app/apiLogin.php";//登录
 		
-		public static final String Regist=InterfaceURL.BASE_URL+"api/apiRegist.php"; //用户注册
+		public static final String Regist=InterfaceURL.BASE_URL+"api/app/apiRegist.php"; //用户注册
 		
-		public static final String VillageCat=InterfaceURL.BASE_URL+"api/apiVillageCat.php";//分类
+		public static final String VillageCat=InterfaceURL.BASE_URL+"api/app/apiVillageCat.php";//分类
 		
-		public static final String Region=InterfaceURL.BASE_URL+"api/apiRegion.php";// 定位
+		public static final String Region=InterfaceURL.BASE_URL+"api/app/apiRegion.php";// 定位
 		
-		public static final String Citylist=InterfaceURL.BASE_URL+"api/apicitylist.php";//获取定位城市资源  参数 province 城市名称
+		public static final String AdList=InterfaceURL.BASE_URL+"api/app/apiAd.php";//广告列表
 		
-		public static final String Village=InterfaceURL.BASE_URL+"api/apiVillage.php";// 乡村列表和乡村基础信息 catid=1&regionid=97
+		public static final String Citylist=InterfaceURL.BASE_URL+"api/app/apicitylist.php";//获取定位城市资源  参数 province 城市名称
 		
-		public static final String Villagecunli=InterfaceURL.BASE_URL+"api/apiVillagecunli.php";// 村里内容 参数：villageid
+		public static final String Village=InterfaceURL.BASE_URL+"api/app/apiVillage.php";// 乡村列表和乡村基础信息 catid=1&regionid=97
 		
-		public static final String VillageHuodongList=InterfaceURL.BASE_URL+"api/apiVillageHuodongList.php";//村里活动 参数：villageid
+		public static final String Villagecunli=InterfaceURL.BASE_URL+"api/app/apiVillagecunli.php";// 村里内容 参数：villageid
+		
+		//public static final String VillageHuodongList=InterfaceURL.BASE_URL+"api/apiVillageHuodongList.php";//村里活动 参数：villageid
+		public static final String Resource=InterfaceURL.BASE_URL+"api/app/apiVillageResource.php";//村里资源信息
+		
+		public static final String GOOGS=InterfaceURL.BASE_URL+"api/app/apigoods.php";//集市列表 参数：page
+		
 	}
 	
 	@SuppressWarnings("deprecation")

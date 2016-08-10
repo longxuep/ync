@@ -1,0 +1,65 @@
+package com.example.test;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
+
+import com.example.test.time.TimeSelector;
+
+
+public class TestTimeActivity extends Activity implements OnClickListener{
+	private TimeSelector timeSelector;
+	private String startDate="";
+	private String endDate="";
+	private TextView tv_time;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_testtime);
+        tv_time=(TextView)findViewById(R.id.tv_time);
+        
+		
+    }
+
+	@Override
+	public void onClick(View v) {
+		if(v!=null){
+			if(v.getId()==R.id.bt_time)startTime();
+			
+		}
+	}
+	// 打开时间选择器
+		private void startTime() {
+			try {
+				long ltime;
+				ltime = System.currentTimeMillis();// 获取当前系统时间
+				Date d=new Date(ltime);;
+				Calendar c = Calendar.getInstance();
+				c.setTime(d);
+				c.add(Calendar.YEAR, 1);// 加上一年时间
+				startDate = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(d);// 开始时间
+				endDate = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date(c.getTimeInMillis()));// 结束时间
+				timeSelector = new TimeSelector(this,
+						new TimeSelector.ResultHandler() {
+							@Override
+							public void handle(String time) {
+								tv_time.setText(time);
+							}
+						}, startDate, endDate);
+
+				timeSelector.setScrollUnit(TimeSelector.SCROLLTYPE.HOUR,
+						TimeSelector.SCROLLTYPE.MINUTE);
+				timeSelector.show();
+			} catch (Exception e) {
+			}
+		}
+
+   
+
+}

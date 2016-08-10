@@ -1,0 +1,106 @@
+package com.example.test.time;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/*日期时间戳转换yyyy-MM-dd HH:mm:ss*/
+public class DateManager {
+	public static String string2Date(String time) {
+		String resultString = "";
+		try {
+			@SuppressWarnings("deprecation")
+			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			Long times = Long.valueOf(time);
+			resultString = format.format(times);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			return time;
+		}
+		return resultString;
+	}
+	
+	private final static SimpleDateFormat dateFormater = new SimpleDateFormat(
+			"yyyy-MM-dd HH:mm");
+	/**
+	 * 将long转换日期字符串
+	 * @param addTime
+	 * @return
+	 */
+	public static String longToDate(String addTime) {
+		if(addTime!=null && !addTime.isEmpty()){
+			long it = Long.parseLong(addTime);
+			return dateFormater.format(new Date(it * 1000));
+		}else{
+			return "";
+		}
+	}
+	private final static SimpleDateFormat dateFormater2 = new SimpleDateFormat(
+			"yyyy/MM/dd HH:mm:ss");
+	/**
+	 * 将long转换日期格式 “2014/11/20 16:13:17”
+	 * @param addTime
+	 * @return
+	 */
+	public static String longTosuccessTime(String addTime) {
+		if(addTime!=null && !addTime.isEmpty()){
+			long it = Long.parseLong(addTime);
+			return dateFormater2.format(new Date(it * 1000));
+		}else{
+			return "";
+		}
+	}
+	private final static SimpleDateFormat dateFormater3 = new SimpleDateFormat(
+			"yyyy年MM月dd日 HH:mm");
+	/**
+	 * 将long转换日期格式 “2014年11月20日 16:13”
+	 * @param addTime
+	 * @return
+	 */
+	public static String longToTime(String addTime) {
+		if(addTime!=null && !addTime.isEmpty()){
+			long it = Long.parseLong(addTime);
+			return dateFormater3.format(new Date(it * 1000));
+		}else{
+			return "";
+		}
+	}
+
+    /**
+     * 使用用户格式提取字符串日期
+     *
+     * @param strDate 日期字符串
+     * @param pattern 日期格式
+     * @return
+     */
+
+    public static Date parse(String strDate, String pattern) {
+
+        if (TextUtil.isEmpty(strDate)) {
+            return null;
+        }
+        try {
+            SimpleDateFormat df = new SimpleDateFormat(pattern);
+            return df.parse(strDate);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 使用用户格式格式化日期
+     *
+     * @param date    日期
+     * @param pattern 日期格式
+     * @return
+     */
+
+    public static String format(Date date, String pattern) {
+        String returnValue = "";
+        if (date != null) {
+            SimpleDateFormat df = new SimpleDateFormat(pattern);
+            returnValue = df.format(date);
+        }
+        return (returnValue);
+    }
+}

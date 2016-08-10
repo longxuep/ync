@@ -3,6 +3,7 @@ package com.alec.ync.frament;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -45,5 +46,10 @@ public class Jshi_threeFragment extends BaseFragment {
 	public void onDestroyView() {
 		((ViewGroup)view.getParent()).removeView(view);
 		super.onDestroyView();
+	}
+	@Override
+	protected Context getContext() {
+		// TODO Auto-generated method stub
+		return getActivity();
 	}
 }

@@ -5,9 +5,11 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:id="@+id/_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="村里" />
+        android:padding="@dimen/_10px"
+        android:text="正在加载..."
+        android:textColor="@color/black" />
 
 </LinearLayout>

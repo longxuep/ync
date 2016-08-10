@@ -5,44 +5,99 @@
     android:background="@color/bg_gray"
     android:orientation="vertical" >
 
-    <ImageView
-        android:id="@+id/one_item_image"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200px"
-        android:src="@drawable/ic_launcher" />
+        android:layout_height="@dimen/_300px" >
 
-    <TextView
-        android:id="@+id/one_item_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/_10px"
-        android:layout_gravity="left"
-        android:text="这里是标题"
-        android:textColor="@color/black" />
+        <ImageView
+            android:id="@+id/one_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300px"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_image" />
+
+        <TextView
+            android:id="@+id/one_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/xiangcun_bg2"
+            android:gravity="center"
+            android:text="汉堡"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_35px" />
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/_10px"
-        android:orientation="horizontal" >
+        android:layout_height="@dimen/_80px" >
+
+        <TextView
+            android:id="@+id/tv_rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/_5px"
+            android:layout_marginLeft="@dimen/_15px"           
+            android:text="¥"
+            android:textColor="#f06868"
+            android:textSize="@dimen/_20px" />
 
         <TextView
             android:id="@+id/one_item_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:gravity="left"
-            android:text="价格"
-            android:textColor="@color/red"
-            android:textSize="@dimen/_18px" />
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/_5px"
+            android:layout_toRightOf="@id/tv_rmb"
+            android:text="50"
+            android:textColor="#f06868"
+            android:textSize="@dimen/_30px" />
 
+        <TextView
+            android:id="@+id/one_item_purchase_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/_10px"
+            android:layout_toRightOf="@id/one_item_price"
+            android:text="100.5"
+            android:textColor="#c5c4c4"
+            android:textSize="@dimen/_20px" />
+
+        <include
+            android:id="@+id/include1"
+            android:layout_width="@dimen/_180px"
+            android:layout_height="@dimen/_80px"
+            android:layout_alignParentRight="true"
+            layout="@layout/btn_add_common36" />
+
+        <TextView
+            android:id="@+id/selltitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_15px"  
+            android:text="已售:"
+            android:textColor="#c5c4c4"
+            android:textSize="@dimen/_24px" />
         <TextView
             android:id="@+id/one_item_sell"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="已售"
-            android:textSize="@dimen/_18px" />
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/selltitle"
+            android:text="0"
+            android:textColor="#c5c4c4"
+            android:textSize="@dimen/_24px" />
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2px"
+        android:layout_alignParentBottom="true"
+        android:background="#e5e5e5" />
 
 </LinearLayout>

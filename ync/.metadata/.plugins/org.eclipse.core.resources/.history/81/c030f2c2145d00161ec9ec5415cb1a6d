@@ -1,0 +1,7 @@
+package com.example.test;
+
+public class Message {
+	private String title;
+	private String time;
+
+}

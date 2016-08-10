@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/pageinfo_success_code"
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:clickable="true"
+        android:visibility="visible" >
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="确定删除计划采购单？"
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+
+        <View
+            android:id="@+id/view_v1"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/ly_v1"
+            android:background="#bcbcbc" />
+
+        <LinearLayout
+            android:id="@+id/ly_v1"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/dialog_out"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20px"
+                android:paddingTop="20px"
+                android:text="取消"
+                android:textColor="#ffffff"
+                android:textSize="26px" />
+
+            <View
+                android:id="@+id/view_v2"
+                android:layout_width="2px"
+                android:layout_height="wrap_content"
+                android:background="@color/public_colors_view_v1" />
+
+            <TextView
+                android:id="@+id/dialog_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_20px"
+                android:paddingTop="@dimen/_20px"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_26px" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

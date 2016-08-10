@@ -3,6 +3,7 @@ package com.alec.ync.frament;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -37,13 +38,18 @@ public class Jshi_twoFragment extends BaseFragment {
 			ms.setImag("http://www.baidu.com/img/bd_logo1.png");
 			list.add(ms);
 		}
-		twoAdapter=new Jshi_TwoAdapter(getActivity(),list);
-		two_item_gview.setAdapter(twoAdapter);
-		twoAdapter.notifyDataSetChanged();
+//		twoAdapter=new Jshi_TwoAdapter(getActivity(),list);
+//		two_item_gview.setAdapter(twoAdapter);
+//		twoAdapter.notifyDataSetChanged();
 	}
 	@Override
 	public void onDestroyView() {
 		((ViewGroup)view.getParent()).removeView(view);
 		super.onDestroyView();
+	}
+	@Override
+	protected Context getContext() {
+		// TODO Auto-generated method stub
+		return getActivity();
 	}
 }

@@ -1,0 +1,142 @@
+package com.spa51.teacher.util;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ * 时间转换
+ */
+public class TimeUtil {
+
+	/**
+	 * 将long时间戳转换日期
+	 * 
+	 * @param addTime
+	 * @return
+	 */
+	private final static SimpleDateFormat dateFormater = new SimpleDateFormat(
+			"yyyy-MM-dd HH:mm");
+	private final static SimpleDateFormat hour = new SimpleDateFormat("HH:mm");
+	private final static SimpleDateFormat DD = new SimpleDateFormat("dd");
+
+	public static String longToDate(String addTime) {
+		if (addTime != null && !addTime.isEmpty()) {
+			if (addTime.length() < 11) {
+				Long it = Long.parseLong(addTime);
+				return dateFormater.format(new Date(it * 1000));
+			} else {
+				Long it = Long.parseLong(addTime);
+				return dateFormater.format(new Date(it));
+			}
+		} else {
+			return "";
+		}
+	}
+
+	public static String longToDatehour(String addTime) {
+		if (addTime != null && !addTime.isEmpty()) {
+			if (addTime.length() < 11) {
+				Long it = Long.parseLong(addTime);
+				return hour.format(new Date(it * 1000));
+			} else {
+				Long it = Long.parseLong(addTime);
+				return hour.format(new Date(it));
+			}
+		} else {
+			return "";
+		}
+	}
+
+	public static int longToDD(String addTime, SimpleDateFormat YMD) {
+		if (addTime != null && !addTime.isEmpty()) {
+			if (addTime.length() < 11) {
+				Long it = Long.parseLong(addTime);
+				return Integer.valueOf(YMD.format(new Date(it * 1000)));
+			} else {
+				Long it = Long.parseLong(addTime);
+				return Integer.valueOf(YMD.format(new Date(it)));
+			}
+		} else {
+			return 0;
+		}
+	}
+
+	public static int longToDDGet(String addTime) {
+		try {
+			Date date = dateFormater.parse(addTime);
+			addTime = String.valueOf(date.getTime());
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		if (addTime != null && !addTime.isEmpty()) {
+			if (addTime.length() < 11) {
+				Long it = Long.parseLong(addTime);
+				return Integer.valueOf(DD.format(new Date(it * 1000)));
+			} else {
+				Long it = Long.parseLong(addTime);
+				return Integer.valueOf(DD.format(new Date(it)));
+			}
+		} else {
+			return 0;
+		}
+	}
+
+	public static int longToDDS(String addTime, SimpleDateFormat YMD) {
+		try {
+			Date date = YMD.parse(addTime);
+			addTime = String.valueOf(date.getTime());
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		if (addTime != null && !addTime.isEmpty()) {
+			if (addTime.length() < 11) {
+				Long it = Long.parseLong(addTime);
+				return Integer.valueOf(YMD.format(new Date(it * 1000)));
+			} else {
+				Long it = Long.parseLong(addTime);
+				return Integer.valueOf(YMD.format(new Date(it)));
+			}
+		} else {
+			return 0;
+		}
+	}
+
+	/*
+	 * 将日期 转换时间戳long
+	 */
+	public static String getTime(String addTime) {
+		String gtime = "";
+		Date d;
+		try {
+			d = dateFormater.parse(addTime);
+			long l = d.getTime();
+			String str = String.valueOf(l);
+			gtime = str.substring(0, 10);
+		} catch (Exception e) {
+			return gtime;
+		}
+		return gtime;
+	}
+
+	/**
+	 * 将10 or 13 位时间戳转为时间字符串 convert the number
+	 */
+	public static int timestamp2Date(String str_num) {
+		return Integer.valueOf(getTime(longToDate(str_num)));
+	}
+
+	/**
+	 * String转long
+	 * 
+	 * @param obj
+	 * @return 转换异常返回 0
+	 */
+	public static long toLong(String obj) {
+		try {
+			return Long.parseLong(obj);
+		} catch (Exception e) {
+		}
+		return 0;
+	}
+}

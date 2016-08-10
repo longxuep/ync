@@ -80,7 +80,6 @@ public class ViewPagerIndicateHelper {
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(viewPager.getContext().getResources().getDimensionPixelOffset(R.dimen._20px), viewPager.getContext().getResources().getDimensionPixelOffset(R.dimen._20px));
             lp.setMargins(7, 0, 7, 0);
             imageView.setLayoutParams(lp);
-
             imageView.setPadding(viewPager.getContext().getResources().getDimensionPixelOffset(R.dimen._20px), 0, viewPager.getContext().getResources().getDimensionPixelOffset(R.dimen._20px), 0);
             imageViews[i] = imageView;
             if (i == 0) {

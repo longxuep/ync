@@ -8,21 +8,29 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
 
+
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!-- 访问网络，网络定位需要上网-->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <!-- 百度定位权限 start -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission> 
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <!-- 百度定位权限 end -->
 
 
     <!-- 禁止屏幕随手机旋转变化  android:screenOrientation="值"  landscape = 横向  portrait = 纵向 -->
@@ -34,8 +42,22 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+     
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>        
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="DBf3bb616650605e5c4c47e4657403ea" />  <!--http://lbsyun.baidu.com/apiconsole/key-->
 
-        <!-- 百度定位SDK APPKEY -->
+        
+        <!-- 百度定位SDK APPKEY
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="UtqLyu0rfUjl4d1Dg1T6Lyko4mtRxmae" />
@@ -46,7 +68,7 @@
             <intent-filter>
                 <action android:name="com.baidu.location.service_v2.2" />
             </intent-filter>
-        </service>
+        </service> -->
          <!-- 百度定位 KEY -->
         <activity
             android:name="com.alec.ync.activity.StartActivity"
@@ -63,73 +85,134 @@
             android:name="com.alec.ync.activity.FrameActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" />
+        
+        
+        
         <!-- 乡村主页-位置页面 -->
         <activity
-            android:name="com.alec.ync.activity.XiangcunDingweiActivity"
+            android:name="com.alec.ync.activity.DingweiActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 乡村主页- 乡村详情-->
         <activity
-            android:name="com.alec.ync.activity.XiangcunListActivity"
+            android:name="com.alec.ync.xiangcun.ui.XiangcunListActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 乡村主页- 乡村列表集合-->
         
         <activity
-            android:name="com.alec.ync.activity.XiangCunDetailsActivity"
+            android:name="com.alec.ync.xiangcun.ui.XiangCunDetailsActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 乡村主页-搜索页面 -->
         <activity
-            android:name="com.alec.ync.activity.XiangcunSearchActivity"
+            android:name="com.alec.ync.jishi.ui.XiangcunSearchActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 乡村主页-扩展模板 -->
+        <activity
+            android:name="com.alec.ync.xiangcun.ui.XiangcunKuoZhanActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />     
+         
+        
+        
+        
+        
+        <!-- 集市-搜索页面 -->
+        <activity
+            android:name="com.alec.ync.jishi.ui.JishiSearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />        
+        <!-- 集市-筛选页面 -->
+        <activity
+            android:name="com.alec.ync.jishi.ui.FilterActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />            
+        
+        
+        
+        
+        <!-- 我的页面-我的信息 -->
+        <activity
+            android:name="com.alec.ync.wode.ui.WdxxActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />            
+        <!-- 我的页面-我推荐的乡村 -->
+        <activity
+            android:name="com.alec.ync.wode.ui.WtjdxcActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />        
+        <!-- 我的页面-我的收藏 -->
+        <activity
+            android:name="com.alec.ync.wode.ui.WdscActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />        
         <!-- 我的页面-用户登录 -->
         <activity
-            android:name="com.alec.ync.activity.WodeLoginActivity"
+            android:name="com.alec.ync.wode.ui.LoginActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 我的页面-用户注册 -->
         <activity
-            android:name="com.alec.ync.activity.WodeRegisterActivity"
+            android:name="com.alec.ync.wode.ui.RegisterActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的页面-找回密码 -->
+        <activity
+            android:name="com.alec.ync.wode.ui.FindPwdActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 我的页面-用户购物车 -->
         <activity
-        android:name="com.alec.ync.activity.WodeShopCartActivity"
+        android:name="com.alec.ync.wodo.ui.ShopCartActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 我的页面-设置信息 -->
         <activity
-            android:name="com.alec.ync.activity.WodeSetActivity"
+            android:name="com.alec.ync.wode.ui.SetActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 我的页面-设置信息-使用帮助 -->
         <activity
-            android:name="com.alec.ync.activity.WodeSetHelpActivity"
+            android:name="com.alec.ync.wode.ui.HelpActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 我的页面-设置信息-关于我们 -->
         <activity
-        android:name="com.alec.ync.activity.WodeSetGuangyuActivity"
+        android:name="com.alec.ync.wode.ui.GuangyuActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <!-- 我的页面-设置信息-意见反馈 -->
         <activity
-            android:name="com.alec.ync.activity.WodeSetFankuiActivity"
+            android:name="com.alec.ync.wode.ui.FankuiActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的页面-推送测试 -->
+        <activity
+            android:name="com.alec.ync.activity.Notification"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />        
+        
     </application>
 
 </manifest>

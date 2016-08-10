@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.test.MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/image_v1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_launcher"
+            android:scaleType="fitXY" />
+         <TextView
+            android:id="@+id/tv_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image_v1"
+            android:layout_marginLeft="30dp"
+            android:text="名称"
+            android:textSize="30px"/>
+         <TextView
+            android:id="@+id/tv_v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_v1"
+            android:layout_toRightOf="@+id/image_v1"
+            android:layout_marginLeft="30dp"
+            android:text="学院"/>
+         <TextView
+            android:id="@+id/tv_v3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="周四"/>
+         <TextView
+            android:id="@+id/tv_v4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_v3"
+             android:layout_alignParentRight="true"
+             android:layout_alignBottom="@+id/tv_v2"
+            android:text="第16周"/>
+          <TextView
+            android:id="@+id/tv_v5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_v4"
+             android:layout_alignBottom="@+id/tv_v2"
+            android:layout_marginLeft="30dp"
+            android:text="6月29日"/>
+    </RelativeLayout>
+
+</LinearLayout>

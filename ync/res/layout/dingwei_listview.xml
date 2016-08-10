@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+   <RelativeLayout
+            android:id="@+id/rl_v1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_96px"
+            android:background="@drawable/header_bg" >
+
+            <TextView
+                android:id="@+id/_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/btn_back"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_20px"
+                android:text=" 返回"
+                android:textColor="@color/yzc_textcolor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="手动选择"
+                android:textColor="@color/yzc_textcolor"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    <com.alec.ync.widget.listview.PullToRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pullToRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_v1" >
+        
+        <include layout="@layout/listview_refresh_head" />
+
+        <com.alec.ync.widget.listview.PullableListView
+            android:id="@+id/item_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbars="none" />
+
+        <include layout="@layout/listview_load_more" />
+    </com.alec.ync.widget.listview.PullToRefreshLayout>   
+
+</RelativeLayout>

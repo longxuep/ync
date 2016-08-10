@@ -1,0 +1,76 @@
+package com.example.test.time;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
+
+import com.example.test.R;
+
+
+/**
+ * 弹窗
+ * @author longhf
+ * @date 2016-8-1
+ * @version 1.0.0
+ */
+public class ShowTimeDialog extends Dialog implements OnClickListener{
+	
+	private Context context;
+	private TextView title,off_diss,comit;
+	private View view;
+	private Window win;
+	private WindowManager.LayoutParams lp;
+	public ShowTimeDialog(Context context) {
+		super(context,R.style.theme_dialog);
+		this.context=context;
+	}
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		view = LayoutInflater.from(context).inflate(R.layout.view_dialog, null);
+		win = this.getWindow();
+		win.getDecorView().setPadding(0, 0, 0, 0);
+		lp = win.getAttributes();
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height =WindowManager.LayoutParams.MATCH_PARENT;
+        win.setAttributes(lp);
+        this.setContentView(view);
+        this.setCancelable(false);//点击外部不关闭
+        initViews();
+	}
+	
+	public void initViews() {
+		comit = (TextView) findViewById(R.id.dialog_confirm);
+		off_diss=(TextView)findViewById(R.id.dialog_out);
+		title = (TextView) findViewById(R.id.dialog_title);
+		
+		comit.setOnClickListener(this);
+		off_diss.setOnClickListener(this);
+	}
+	public void setInitdate(String str){
+		title.setText(str==null?"":str);
+	}
+	@Override
+	public void dismiss() {
+		super.dismiss();
+	}
+	@Override
+	public void show() {
+		super.show();
+	}
+	@Override
+	public void onClick(View v) {
+		if(v!=null){
+			if(v.getId()==R.id.dialog_out){
+				dismiss();
+			}
+		}
+	}
+}
